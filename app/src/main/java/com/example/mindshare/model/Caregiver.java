@@ -5,6 +5,7 @@ public class Caregiver {
     private String id;
     private String firstName;
     private String lastName;
+    private int imageId;
 
     public Caregiver(String id, String firstName, String lastName) {
         this.id = id;
@@ -34,5 +35,17 @@ public class Caregiver {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public int getImageId() {
+        return imageId;
+    }
+
+    public String getFullName() {
+        return firstName + lastName;
+    }
+
+    public void setImageId(int imageId) {
+        this.imageId = imageId;
     }
 }

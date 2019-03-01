@@ -13,14 +13,27 @@ public class CaregiverRepository {
     }
 
     public List<Caregiver> getCaregivers() {
-        List<Caregiver> patients = new ArrayList<>();
+        List<Caregiver> caregivers = new ArrayList<>();
 
-        patients.add(new Caregiver("4eaada5", "Doe", "password"));
-        patients.add(new Caregiver("5da6a66", "Roe", "password"));
-        patients.add(new Caregiver("525aad4", "Smith", "password"));
-        patients.add(new Caregiver("adz6azd", "Smith", "password"));
-        patients.add(new Caregiver("5645a45", "Smith", "password"));
+        Caregiver caregiver1 = new Caregiver("4eaada5", "Doe", "password");
+        Caregiver caregiver2 = new Caregiver("5da6a66", "Roe", "password");
+        Caregiver caregiver3 = new Caregiver("525aad4", "Smith", "password");
+        Caregiver caregiver4 = new Caregiver("adz6azd", "Smith", "password");
+        Caregiver caregiver5 = new Caregiver("5645a45", "Smith", "password");
 
-        return patients;
+
+        caregiver1.setImageId("caregiver1.png");
+        caregiver1.setImageId("caregiver2.png");
+        caregiver1.setImageId("caregiver1.png");
+        caregiver1.setImageId("caregiver2.png");
+
+        caregivers.add(caregiver1);
+        caregivers.add(caregiver2);
+        caregivers.add(caregiver3);
+        caregivers.add(caregiver4);
+        caregivers.add(caregiver5);
+
+
+        return caregivers;
     }
 }
