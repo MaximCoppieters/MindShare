@@ -22,6 +22,25 @@
 
     <include layout="@layout/content_patient_list" />
 
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/beers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            tools:listitem="@layout/patient_beer_select"
+            android:layout_marginBottom="75dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </LinearLayout>
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
