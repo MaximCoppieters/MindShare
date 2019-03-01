@@ -1,5 +1,6 @@
 package com.example.mindshare.repo;
 
+import com.example.mindshare.R;
 import com.example.mindshare.model.Caregiver;
 
 import java.util.ArrayList;
@@ -22,10 +23,10 @@ public class CaregiverRepository {
         Caregiver caregiver5 = new Caregiver("5645a45", "Smith", "password");
 
 
-        caregiver1.setImageId("caregiver1.png");
-        caregiver1.setImageId("caregiver2.png");
-        caregiver1.setImageId("caregiver1.png");
-        caregiver1.setImageId("caregiver2.png");
+        caregiver1.setImageId(R.drawable.caregiver1);
+        caregiver1.setImageId(R.drawable.caregiver2);
+        caregiver1.setImageId(R.drawable.caregiver1);
+        caregiver1.setImageId(R.drawable.caregiver2);
 
         caregivers.add(caregiver1);
         caregivers.add(caregiver2);

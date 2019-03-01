@@ -16,7 +16,7 @@
             android:id="@+id/patient_image"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/"
+            android:src="@drawable/patient1"
             />
         <TextView
             android:id="@+id/patient_name"

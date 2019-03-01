@@ -62,7 +62,7 @@ public class PatientList extends AppCompatActivity {
         @NonNull
         @Override
         public PatientViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int position) {
-            View view = LayoutInflater.from(viewGroup.getContext()
+            View view = LayoutInflater.from(viewGroup.getContext())
                     .inflate(R.layout.row_patient_select, viewGroup, false);
             return new PatientViewHolder(view);
         }
