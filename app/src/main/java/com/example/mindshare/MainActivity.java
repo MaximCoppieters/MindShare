@@ -1,5 +1,6 @@
 package com.example.mindshare;
 
+import android.Manifest;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.net.Uri;
@@ -7,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.view.menu.MenuView;
 import android.support.v7.widget.Toolbar;
@@ -15,6 +17,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.content.pm.PackageManager;
 import com.mapbox.android.core.permissions.PermissionsListener;
@@ -29,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int MY_PERMISSIONS_REQUEST_SEND_SMS = 1;
     private static final String TAG = "MainActivity";
-    private PermissionManager permissionsManager;
+    private PermissionsManager permissionsManager;
     private CaregiverRepository caregiverRepository;
 private PatientRepository patientRepository;
 
@@ -51,6 +54,12 @@ private PatientRepository patientRepository;
 
         findViewById(R.id.patientSide).setOnClickListener((view)->{
             patientRepository = patientRepository.getInstance();
+        });
+
+        ImageButton panicbutton = findViewById(R.id.panicbutton);
+        panicbutton.setOnClickListener((view) -> {
+            requestPermission();
+            smsSendMessage(view);
         });
 
     }
@@ -75,6 +84,15 @@ private PatientRepository patientRepository;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void requestPermission() {
+
+        ActivityCompat.requestPermissions(MainActivity.this, new String[]
+                {
+                        Manifest.permission.SEND_SMS
+                }, MY_PERMISSIONS_REQUEST_SEND_SMS);
+
     }
 
     public void smsSendMessage(View view) {
