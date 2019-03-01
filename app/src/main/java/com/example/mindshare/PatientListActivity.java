@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
@@ -21,14 +22,12 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class PatientList extends AppCompatActivity {
+public class PatientListActivity extends AppCompatActivity {
 
     private List<Patient> patients;
     private PatientRepository patientRepository = new PatientRepository();
     private RecyclerView patientsRecyclerView;
     private PatientAdapter patientAdapter;
-    private FrameLayout loading_layout;
-    private LinearLayout main_layout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +35,8 @@ public class PatientList extends AppCompatActivity {
         setContentView(R.layout.activity_patient_list);
         Toolbar toolbar = findViewById(R.id.toolbar);
 
-        patients = patientRepository.getPatients();
         patientsRecyclerView = findViewById(R.id.patients);
+        initializePatients();
 
         setSupportActionBar(toolbar);
 
@@ -49,6 +48,15 @@ public class PatientList extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    private void initializePatients() {
+        patients = patientRepository.getPatients();
+
+        patientAdapter = new PatientAdapter(patients);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        patientsRecyclerView.setLayoutManager(layoutManager);
+        patientsRecyclerView.setAdapter(patientAdapter);
     }
 
     private class PatientAdapter extends RecyclerView.Adapter<PatientAdapter.PatientViewHolder> {
@@ -74,7 +82,7 @@ public class PatientList extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(@NonNull final PatientViewHolder patientViewHolder, final int position) {
-            final Patient selectedPatient = PatientList.this.patients.get(position);
+            final Patient selectedPatient = PatientListActivity.this.patients.get(position);
 
             patientViewHolder.patient_name.setText(selectedPatient.getFullName());
             patientViewHolder.patient_image.setImageResource(selectedPatient.getImageId());
@@ -84,7 +92,7 @@ public class PatientList extends AppCompatActivity {
             patientViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    // View patient
+                    
                 }
             });
         }

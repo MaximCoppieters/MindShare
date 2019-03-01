@@ -24,10 +24,10 @@ public class PatientRepository {
         Patient patient5 = new Patient("Allen", "Smith", "password");
 
         patient1.setImageId(R.drawable.patient1);
-        patient1.setImageId(R.drawable.patient2);
-        patient1.setImageId(R.drawable.patient3);
-        patient1.setImageId(R.drawable.patient4);
-        patient1.setImageId(R.drawable.patient5);
+        patient2.setImageId(R.drawable.patient2);
+        patient3.setImageId(R.drawable.patient3);
+        patient4.setImageId(R.drawable.patient4);
+        patient5.setImageId(R.drawable.patient5);
 
         patients.add(patient1);
         patients.add(patient2);

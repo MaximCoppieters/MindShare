@@ -24,9 +24,10 @@ public class CaregiverRepository {
 
 
         caregiver1.setImageId(R.drawable.caregiver1);
-        caregiver1.setImageId(R.drawable.caregiver2);
-        caregiver1.setImageId(R.drawable.caregiver1);
-        caregiver1.setImageId(R.drawable.caregiver2);
+        caregiver2.setImageId(R.drawable.caregiver2);
+        caregiver3.setImageId(R.drawable.caregiver1);
+        caregiver4.setImageId(R.drawable.caregiver2);
+        caregiver5.setImageId(R.drawable.caregiver2);
 
         caregivers.add(caregiver1);
         caregivers.add(caregiver2);
