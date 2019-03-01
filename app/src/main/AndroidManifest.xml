@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".OptionsMenuCareTaker"
+            android:label="@string/title_activity_options_menu_care_taker"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".PatientList"
             android:label="@string/title_activity_patient_list"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ConnectActivity"
             android:label="@string/title_activity_connect"

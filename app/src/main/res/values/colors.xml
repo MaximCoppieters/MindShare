@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="pastelRed">#E27D60</color>
-    <color name="lightBlue">#A8D0E6</color>
-    <color name="yellow">#F8E9A1</color>
-    <color name="middleBlue">#374788</color>
-    <color name="darkBlue">#24305E</color>
+<color name="pastelRed">#E27D60</color> <!-- free 2 use -->
+<color name="lightBlue">#A8D0E6</color> <!-- background -->
+<color name="yellow">#F8E9A1</color><!-- free 2 use -->
+<color name="middleBlue">#374788</color> <!-- toolbar -->
+<color name="darkBlue">#24305E</color><!-- free 2 use -->
 
 </resources>
