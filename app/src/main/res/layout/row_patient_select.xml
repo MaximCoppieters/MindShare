@@ -26,14 +26,13 @@
                 android:layout_height="100dp"
                 android:src="@drawable/patient1"
                 style="@style/style_list_item_image"
-                android:layout_weight="0.30"
+                android:layout_weight="0.1"
                 />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.50"
-                android:layout_gravity="center"
                 android:layout_marginLeft="20dp"
                 android:textAlignment="textStart"
                 android:orientation="vertical">
@@ -43,7 +42,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     tools:text="@tools:sample/lorem"
-                    android:textColor=""
                     style="@style/style_list_item_text"
                     />
                 <TextView
@@ -53,14 +51,14 @@
                     tools:text="@tools:sample/lorem"
                     style="@style/style_list_item_text"
                     />
-                <ImageView
-                    android:id="@+id/patient_status"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.0"
-                    android:src="@drawable/exclamation-mark"
-                    />
             </LinearLayout>
+            <ImageView
+                android:id="@+id/patient_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:src="@drawable/exclamationmark"
+                />
 
         </LinearLayout>
 
