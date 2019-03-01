@@ -38,7 +38,7 @@
             android:id="@+id/textDialog"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:hint="First Name"
+            android:hint="Caregiver ID"
             app:layout_constraintWidth_percent="0.7"
             />
     </android.support.design.widget.TextInputLayout>
