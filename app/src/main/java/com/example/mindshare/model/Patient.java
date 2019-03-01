@@ -5,6 +5,7 @@ public class Patient {
     private String firstName;
     private String lastName;
     private String password;
+    private int imageId;
 
     public Patient(String firstName, String lastName, String password) {
         this.firstName = firstName;
@@ -34,5 +35,17 @@ public class Patient {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public int getImageId() {
+        return imageId;
+    }
+
+    public String getFullName() {
+        return firstName + lastName;
+    }
+
+    public void setImageId(int imageId) {
+        this.imageId = imageId;
     }
 }

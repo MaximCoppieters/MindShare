@@ -18,7 +18,10 @@
 
 
 
+        android:layout_height="match_parent"
+        >
         <ImageView
+            android:id="@+id/patientSide"
             android:layout_width="205dp"
             android:layout_height="match_parent"
             android:padding="20dp"
@@ -26,16 +29,15 @@
             tools:ignore="MissingConstraints"
             android:clickable="true"
             android:focusable="true"
-            android:background="@color/pastelRed"/>
-
+            android:background="@color/pastelRed"
+            />
         <ImageView
             android:layout_width="205dp"
             android:layout_height="match_parent"
-            android:id="@+id/supportiveImage"
+            android:id="@+id/supportiveSide"
             android:layout_gravity="right|end"
             android:padding="20dp"
             android:src="@drawable/patient"
-            tools:ignore="MissingConstraints"
             android:clickable="true"
             android:focusable="true"
             android:background="@color/yellow"/>

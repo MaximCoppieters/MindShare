@@ -11,15 +11,15 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         app:cardElevation="4dp"
-        android:id="@+id/beer_select" >
+        android:id="@+id/patient_select" >
         <ImageView
-            android:id="@+id/beer_image"
+            android:id="@+id/patient_image"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/"
+            android:src="@drawable/patient1"
             />
         <TextView
-            android:id="@+id/beer_name"
+            android:id="@+id/patient_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
