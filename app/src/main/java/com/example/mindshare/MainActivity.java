@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int MY_PERMISSIONS_REQUEST_SEND_SMS = 1;
     private static final String TAG = "MainActivity";
-    private PermissionsManager permissionsManager;
+    private PermissionManager permissionsManager;
     private CaregiverRepository caregiverRepository;
 private PatientRepository patientRepository;
 
