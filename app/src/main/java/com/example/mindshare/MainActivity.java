@@ -1,15 +1,23 @@
 package com.example.mindshare;
 
+import android.app.PendingIntent;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.telephony.SmsManager;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final int MY_PERMISSIONS_REQUEST_SEND_SMS = 1;
+    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,4 +57,25 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void smsSendMessage(View view) {
+        String smsNumber = "0498790525";
+        String sms = "Help";
+        Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
+        smsIntent.setData(Uri.parse(smsNumber));
+        smsIntent.putExtra("sms_body", sms);
+        if (smsIntent.resolveActivity(getPackageManager()) != null) {
+            startActivity(smsIntent);
+        } else {
+            Log.e(TAG, "Can't resolve app for ACTION_SENDTO Intent");
+        }
+        String scAddress = null;
+        PendingIntent sentIntent = null, deliveryIntent = null;
+        SmsManager smsManager = SmsManager.getDefault();
+        smsManager.sendTextMessage
+                (smsNumber, scAddress, sms,
+                        sentIntent, deliveryIntent);
+    }
+
+
 }
