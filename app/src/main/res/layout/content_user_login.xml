@@ -4,8 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/yellow"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".UserLogin"
     tools:showIn="@layout/activity_user_login">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteY="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+
+            />
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

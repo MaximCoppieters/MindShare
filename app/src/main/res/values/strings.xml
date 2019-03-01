@@ -4,4 +4,8 @@
     <string name="title_activity_connect">ConnectActivity</string>
     <string name="title_activity_patient_list">PatientList</string>
     <string name="title_activity_options_menu_care_taker">OptionsMenuCareTaker</string>
+    <string name="title_activity_care_taker_home">CareTakerHome</string>
+    <string name="patient_text">User</string>
+    <string name="care_giver_text">Care giver</string>
+    <string name="title_activity_user_login">UserLogin</string>
 </resources>
