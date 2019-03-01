@@ -5,7 +5,5 @@
 <color name="yellow">#F8E9A1</color><!-- free 2 use -->
 <color name="middleBlue">#374788</color> <!-- toolbar -->
 <color name="darkBlue">#24305E</color><!-- free 2 use -->
-<color name="textColor">black</color>
-<color name="lightTextColor">grey</color>
 
 </resources>
