@@ -10,6 +10,15 @@
     tools:showIn="@layout/activity_main">
 
 
+    <ImageButton
+        android:id="@+id/"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:foregroundGravity="bottom"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="295dp"
+        tools:layout_editor_absoluteY="559dp" />
+
 
 
 </android.support.constraint.ConstraintLayout>
