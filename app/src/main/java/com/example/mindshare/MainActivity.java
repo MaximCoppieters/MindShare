@@ -30,14 +30,12 @@ import com.example.mindshare.repo.PatientRepository;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final int MY_PERMISSIONS_REQUEST_SEND_SMS = 1;
-    private static final String TAG = "MainActivity";
-    private PermissionsManager permissionsManager;
     private CaregiverRepository caregiverRepository;
     private PatientRepository patientRepository;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        startActivity(new Intent(MainActivity.this, HelpRequestActivity.class));
         caregiverRepository = new CaregiverRepository();
         patientRepository = new PatientRepository();
         super.onCreate(savedInstanceState);
@@ -63,11 +61,8 @@ public class MainActivity extends AppCompatActivity {
 
         ImageButton panicbutton = findViewById(R.id.panicbutton);
         panicbutton.setOnClickListener((view) -> {
-            requestPermission();
-            checkPermission();
-            if (checkPermission()) {
-                smsSendMessage(view);
-            }
+            Intent intent = new Intent(this, HelpRequestActivity.class);
+
         });
 
     }
@@ -94,45 +89,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void requestPermission() {
 
-        ActivityCompat.requestPermissions(MainActivity.this, new String[]
-                {
-                        Manifest.permission.SEND_SMS
-                }, MY_PERMISSIONS_REQUEST_SEND_SMS);
-
-    }
-
-    private boolean checkPermission() {
-        if (ActivityCompat.checkSelfPermission(this,
-                Manifest.permission.SEND_SMS) !=
-                PackageManager.PERMISSION_GRANTED) {
-            Log.d(TAG, "Permission not granted");
-            requestPermission();
-            return false;
-        } else {
-            return true;
-        }
-    }
-
-    public void smsSendMessage(View view) {
-        String smsNumber = "0498790525";
-        String sms = "Help";
-        Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
-        smsIntent.setData(Uri.parse(smsNumber));
-        smsIntent.putExtra("sms_body", sms);
-        if (smsIntent.resolveActivity(getPackageManager()) != null) {
-            startActivity(smsIntent);
-        } else {
-            Log.e(TAG, "Can't resolve app for ACTION_SENDTO Intent");
-        }
-        String scAddress = null;
-        PendingIntent sentIntent = null, deliveryIntent = null;
-        SmsManager smsManager = SmsManager.getDefault();
-        smsManager.sendTextMessage
-                (smsNumber, scAddress, sms,
-                        sentIntent, deliveryIntent);
-    }
 
 
 }

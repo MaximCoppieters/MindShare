@@ -75,6 +75,4 @@
         android:onClick="smsSendMessage"/>
 
 
-
-
 </android.support.constraint.ConstraintLayout>
