@@ -46,7 +46,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Login to mindshare"
+            android:hint="Login to MindShare"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="70dp"
             android:textColorHint="@android:color/black"

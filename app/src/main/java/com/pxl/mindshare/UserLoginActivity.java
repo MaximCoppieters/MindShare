@@ -75,8 +75,8 @@ public class UserLoginActivity extends AppCompatActivity {
     }
 
     private void resetWarningTextBoxes() {
-        findViewById(R.id.login_invalid_warning_text_box).setVisibility(View.VISIBLE);
-        findViewById(R.id.login_empty_warning_text_box).setVisibility(View.VISIBLE);
+        findViewById(R.id.login_invalid_warning_text_box).setVisibility(View.INVISIBLE);
+        findViewById(R.id.login_empty_warning_text_box).setVisibility(View.INVISIBLE);
     }
 
     private <T extends User> Optional<T> getUserOptionalFromRepository(List<T> users, String email, String password) {
