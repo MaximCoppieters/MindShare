@@ -59,7 +59,10 @@ private PatientRepository patientRepository;
         ImageButton panicbutton = findViewById(R.id.panicbutton);
         panicbutton.setOnClickListener((view) -> {
             requestPermission();
-            smsSendMessage(view);
+            checkPermission();
+            if (checkPermission()) {
+                smsSendMessage(view);
+            }
         });
 
     }
@@ -93,6 +96,18 @@ private PatientRepository patientRepository;
                         Manifest.permission.SEND_SMS
                 }, MY_PERMISSIONS_REQUEST_SEND_SMS);
 
+    }
+
+    private boolean checkPermission() {
+        if (ActivityCompat.checkSelfPermission(this,
+                Manifest.permission.SEND_SMS) !=
+                PackageManager.PERMISSION_GRANTED) {
+            Log.d(TAG, "Permission not granted");
+            requestPermission();
+            return false;
+        } else {
+            return true;
+        }
     }
 
     public void smsSendMessage(View view) {
