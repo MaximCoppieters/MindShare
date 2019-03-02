@@ -12,8 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="44dp"
         android:gravity="center"
-        android:hint="Connect with your caregiver"
+        android:text="Connect with your caregiver"
         android:textSize="28dp"
+        android:textColor="@color/darkBlue"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="65dp" />
 
@@ -27,28 +28,40 @@
         tools:layout_editor_absoluteX="40dp"
         tools:layout_editor_absoluteY="134dp" />
 
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/til"
-        android:layout_width="fill_parent"
+    <RelativeLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="451dp">
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="439dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+             >
 
         <EditText
             android:id="@+id/textDialog"
-            android:layout_width="fill_parent"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
+            android:textColorHint="@color/middleBlue"
+            android:textColor="@color/darkBlue"
             android:hint="Caregiver ID"
-            app:layout_constraintWidth_percent="0.7"
-            />
-    </android.support.design.widget.TextInputLayout>
+            app:layout_constraintWidth_percent="0.7" />
+        </android.support.design.widget.TextInputLayout>
+    </RelativeLayout>
 
     <Button
         android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:background="@color/pastelRed"
         android:text="Connect"
-        app:layout_constraintRight_toRightOf="parent"
+        android:textColor="@color/darkBlue"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
-    />
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="516dp" />
 
 </android.support.constraint.ConstraintLayout>
