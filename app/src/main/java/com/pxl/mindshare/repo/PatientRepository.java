@@ -15,6 +15,10 @@ public class PatientRepository {
         return instance;
     }
 
+    public void addPatient(Patient newPatient){
+        getAll().add(newPatient);
+    }
+
     private PatientRepository() {}
 
     public List<Patient> getAll() {

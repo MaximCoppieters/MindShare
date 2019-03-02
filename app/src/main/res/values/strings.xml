@@ -14,5 +14,5 @@
     <string name="title_activity_add_patient_todo">AddPatientTodoActivity</string>
     <string name="title_activity_patient_progression">PatientProgressionActivity</string>
     <string name="title_activity_popup_question">PopupQuestionActivity</string>
-    <string name="title_activity_color_feeling">ColorFeelingActivity</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
 </resources>

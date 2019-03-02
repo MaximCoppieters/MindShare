@@ -15,6 +15,10 @@ public class CaregiverRepository {
         return instance;
     }
 
+    public void addCareGiver(Caregiver newCareGiver){
+        getAll().add(newCareGiver);
+    }
+
     private CaregiverRepository() {}
 
     public List<Caregiver> getAll() {

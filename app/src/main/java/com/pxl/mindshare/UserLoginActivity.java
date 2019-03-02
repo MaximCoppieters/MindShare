@@ -20,7 +20,7 @@ import java.util.Optional;
 
 public class UserLoginActivity extends AppCompatActivity {
 
-    private ApplicationState<User> appState = ApplicationState.getInstance();
+    private ApplicationState appState = ApplicationState.getInstance();
     private CaregiverRepository caregiverRepository;
     private PatientRepository patientRepository;
 
@@ -68,11 +68,15 @@ public class UserLoginActivity extends AppCompatActivity {
                 }
             }
         });
+
+        findViewById(R.id.user_login_activity_sign_up_button).setOnClickListener((view)->{
+            startActivity(new Intent(UserLoginActivity.this, SignUpActivity.class));
+        });
     }
 
     private void resetWarningTextBoxes() {
-        findViewById(R.id.login_invalid_warning_text_box).setVisibility(View.VISIBLE);
-        findViewById(R.id.login_empty_warning_text_box).setVisibility(View.VISIBLE);
+        findViewById(R.id.login_invalid_warning_text_box).setVisibility(View.INVISIBLE);
+        findViewById(R.id.login_empty_warning_text_box).setVisibility(View.INVISIBLE);
     }
 
     private <T extends User> Optional<T> getUserOptionalFromRepository(List<T> users, String email, String password) {
