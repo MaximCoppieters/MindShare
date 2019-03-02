@@ -9,54 +9,36 @@
     tools:showIn="@layout/activity_add_patient_todo">
 
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/to_do_name"
+
+        <Spinner
+            android:id="@+id/todo_spinner"
+            android:layout_marginTop="160dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:hint="Name"
-            android:inputType="textPersonName"
-            android:layout_marginTop="80dp"
-            android:layout_width="fill_parent">
-        </EditText>
+            android:layout_centerHorizontal="true"
+            >
+
+        </Spinner>
+
 
         <TextView
-            android:id="@+id/to_do_name_waring"
-            android:layout_width="wrap_content"
-            android:layout_marginTop="140dp"
-            android:text="Please fill in a todo name"
+            android:id="@+id/to_do_selection_warning"
             style="@style/style_warning_textview"
-            />
-
-
-        <EditText
-            android:id="@+id/to_do_description"
-            android:layout_height="200dp"
-            android:hint="Description"
-            android:inputType="textPersonName"
-            android:layout_marginTop="180dp"
-            android:layout_width="fill_parent">
-        </EditText>
-
-        <TextView
-            android:id="@+id/to_do_description_warning"
             android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="390dp"
-            android:text="Please fill in a todo description"
-            style="@style/style_warning_textview"
-            />
+            android:text="Please choose a todo item to assign" />
 
         <Button
             android:id="@+id/assign_to_do_button"
             style="@style/style_normal_button"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
             android:layout_marginStart="128dp"
             android:layout_marginTop="460dp"
-            android:layout_marginEnd="152dp"
             android:text="Assign" />
 
     </RelativeLayout>
