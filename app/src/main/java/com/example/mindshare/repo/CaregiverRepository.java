@@ -15,6 +15,8 @@ public class CaregiverRepository {
         return instance;
     }
 
+    private CaregiverRepository() {}
+
     public List<Caregiver> getAll() {
         List<Caregiver> caregivers = new ArrayList<>();
 
@@ -22,19 +24,19 @@ public class CaregiverRepository {
         List<Patient> patients = patientRepository.getPatients();
 
 
-        Caregiver caregiver1 = new Caregiver("John", "Doe", "password");
-        Caregiver caregiver2 = new Caregiver("Jane", "Roe", "password");
+        Caregiver caregiver1 = new Caregiver("Jane", "Roe", "password");
+        Caregiver caregiver2 = new Caregiver("John", "Doe", "password");
 
-        caregiver1.setId("4eaada5");
-        caregiver2.setId("5da6a66");
+        caregiver2.setId("4eaada5");
+        caregiver1.setId("5da6a66");
 
         ApplicationState state = ApplicationState.getInstance();
 
         state.setUserType(Caregiver.class);
 
         for (int i = 0; i < 3; i++) {
-            patients.get(i).setCaregiver(caregiver1);
             patients.get(i).setCaregiver(caregiver2);
+            patients.get(i).setCaregiver(caregiver1);
         }
 
         caregiver1.setImageId(R.drawable.caregiver1);

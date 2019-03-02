@@ -43,4 +43,11 @@ public class Caregiver extends User {
     public int hashCode() {
         return Objects.hash(super.hashCode());
     }
+
+    @Override
+    public String toString() {
+        return "Caregiver{" +
+                "id='" + id + '\'' +
+                '}';
+    }
 }

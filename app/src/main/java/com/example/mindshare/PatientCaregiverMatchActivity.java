@@ -6,11 +6,13 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.mindshare.model.ApplicationState;
 import com.example.mindshare.model.Caregiver;
 import com.example.mindshare.model.Patient;
+import com.squareup.picasso.Picasso;
 
 public class PatientCaregiverMatchActivity extends AppCompatActivity {
 
@@ -25,10 +27,15 @@ public class PatientCaregiverMatchActivity extends AppCompatActivity {
 
         Patient patient = (Patient) appState.getLoggedInUser();
 
-        String caregiverName = patient.getCaregiver().getFullName();
+        Caregiver caregiverAssigned = patient.getCaregiver();
+
 
         TextView caregiverNameTextView = findViewById(R.id.caregiver_name);
-        caregiverNameTextView.setText(caregiverName);
+        caregiverNameTextView.setText(caregiverAssigned.getFullName());
+
+
+        ImageView caregiverImageView = findViewById(R.id.caregiver_foto);
+        Picasso.get().load(caregiverAssigned.getImageId()).into(caregiverImageView);
     }
 
 }

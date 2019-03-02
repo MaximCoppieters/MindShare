@@ -43,4 +43,12 @@ public class Patient extends User {
     public int hashCode() {
         return Objects.hash(super.hashCode());
     }
+
+    @Override
+    public String toString() {
+        return "Patient{" +
+                "caregiver=" + caregiver +
+                ", todoList=" + todoList +
+                '}';
+    }
 }

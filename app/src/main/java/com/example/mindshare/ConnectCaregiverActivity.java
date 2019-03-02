@@ -35,14 +35,20 @@ public class ConnectCaregiverActivity extends AppCompatActivity {
 
             String caregiverId = caregiverIdTextView.getText().toString();
 
-            CaregiverRepository caregiverRepository = new CaregiverRepository();
+            CaregiverRepository caregiverRepository = CaregiverRepository.getInstance();
             List<Caregiver> caregivers = caregiverRepository.getAll();
 
             if (careGiverIdExists(caregiverId, caregivers)) {
                 Patient loggedInPatient = (Patient) appState.getLoggedInUser();
                 Caregiver matchedCareGiver = getCareGiverOfId(caregiverId, caregivers);
 
+                matchedCareGiver.addPatient(loggedInPatient);
                 loggedInPatient.setCaregiver(matchedCareGiver);
+
+                appState.setLoggedInUser(loggedInPatient);
+
+                System.err.println(matchedCareGiver);
+                System.err.println(loggedInPatient);
 
                 Intent intent = new Intent(this, PatientCaregiverMatchActivity.class);
                 startActivity(intent);
@@ -64,5 +70,4 @@ public class ConnectCaregiverActivity extends AppCompatActivity {
                 .findFirst()
                 .get();
     }
-
 }
