@@ -62,4 +62,18 @@
         tools:layout_editor_absoluteX="248dp"
         tools:layout_editor_absoluteY="442dp" />
 
+    <ImageButton
+        android:id="@+id/panicbutton"
+        android:src="@drawable/panic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:foregroundGravity="bottom"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="295dp"
+        tools:layout_editor_absoluteY="559dp"
+        android:onClick="smsSendMessage"/>
+
+
+
+
 </android.support.constraint.ConstraintLayout>
