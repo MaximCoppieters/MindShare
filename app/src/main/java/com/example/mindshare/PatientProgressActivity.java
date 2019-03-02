@@ -1,5 +1,6 @@
 package com.example.mindshare;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -43,8 +44,7 @@ public class PatientProgressActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                startActivity(new Intent(PatientProgressActivity.this, AddPatientTodoActivity.class));
             }
         });
 
@@ -75,6 +75,7 @@ public class PatientProgressActivity extends AppCompatActivity {
 
     private void displayPatientNameOnToolBar(Toolbar toolbar) {
         toolbar.setTitle(patient.getFullName() + "'s progress");
+        setSupportActionBar(toolbar);
     }
 
     private class TodoItemAdapter extends RecyclerView.Adapter<TodoItemAdapter.ViewHolder> {
@@ -86,15 +87,12 @@ public class PatientProgressActivity extends AppCompatActivity {
 
         }
 
-        // Create new views
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent,
                                                              int viewType) {
-            // create a new view
             View itemLayoutView = LayoutInflater.from(parent.getContext()).inflate(
                     R.layout.row_todo_select, null);
 
-            // create ViewHolder
 
             ViewHolder viewHolder = new ViewHolder(itemLayoutView);
 

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".AddPatientTodoActivity"
+    tools:showIn="@layout/activity_add_patient_todo">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/to_do_name"
+            android:layout_height="wrap_content"
+            android:hint="To Do Name"
+            android:inputType="textPersonName"
+            android:layout_marginTop="80dp"
+            android:layout_width="fill_parent">
+        </EditText>
+
+
+        <EditText
+            android:id="@+id/to_do_description"
+            android:layout_height="200dp"
+            android:hint="Description"
+            android:inputType="textPersonName"
+            android:layout_marginTop="160dp"
+            android:layout_width="fill_parent">
+        </EditText>
+
+        <Button
+            android:id="@+id/assign_to_do_button"
+            style="@style/style_normal_button"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="128dp"
+            android:layout_marginTop="400dp"
+            android:layout_marginEnd="152dp"
+            android:text="Assign" />
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

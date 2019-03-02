@@ -12,9 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".AddPatientTodoActivity"
+            android:label="@string/title_activity_add_patient_todo"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".PatientProgressActivity"
             android:label="@string/title_activity_patient_progress"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".HelpRequestActivity"
             android:label="@string/title_activity_help_request"
