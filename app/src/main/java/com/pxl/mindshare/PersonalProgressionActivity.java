@@ -15,7 +15,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.pxl.mindshare.business.PopupTimerTask;
-import com.pxl.mindshare.model.ApplicationState;
+import com.pxl.mindshare.business.ApplicationState;
 import com.pxl.mindshare.model.Patient;
 import com.pxl.mindshare.model.TodoItem;
 

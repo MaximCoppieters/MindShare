@@ -1,7 +1,7 @@
 package com.pxl.mindshare.repo;
 
 import com.pxl.mindshare.R;
-import com.pxl.mindshare.model.ApplicationState;
+import com.pxl.mindshare.business.ApplicationState;
 import com.pxl.mindshare.model.Caregiver;
 import com.pxl.mindshare.model.Patient;
 
@@ -27,7 +27,7 @@ public class CaregiverRepository {
         Caregiver caregiver2 = new Caregiver("Roger", "Guy", "password", "rogerguy@gmail.com");
 
         caregiver2.setId("1234");
-        caregiver1.setId("1234");
+        caregiver1.setId("2345");
 
         ApplicationState state = ApplicationState.getInstance();
 
