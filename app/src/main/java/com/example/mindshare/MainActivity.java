@@ -1,30 +1,16 @@
 package com.example.mindshare;
 
-import android.Manifest;
-import android.app.PendingIntent;
-import android.content.Intent;
-import android.net.Uri;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.view.menu.MenuView;
 import android.support.v7.widget.Toolbar;
-import android.telephony.SmsManager;
-import android.util.Log;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.content.pm.PackageManager;
-import com.mapbox.android.core.permissions.PermissionsListener;
-import com.mapbox.android.core.permissions.PermissionsManager;
+import android.widget.RelativeLayout;
 
 
-import com.example.mindshare.model.Caregiver;
 import com.example.mindshare.repo.CaregiverRepository;
 import com.example.mindshare.repo.PatientRepository;
 
@@ -42,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        ImageView caretakerSide = findViewById(R.id.supportiveSide);
-        ImageView patientSide = findViewById(R.id.patientSide);
+        RelativeLayout caretakerSide = findViewById(R.id.supportive_side);
+        RelativeLayout patientSide = findViewById(R.id.patient_side);
 
         caretakerSide.setOnClickListener((view)-> {
             startActivity(new Intent(MainActivity.this, PatientListActivity.class));
@@ -51,11 +37,6 @@ public class MainActivity extends AppCompatActivity {
 
         patientSide.setOnClickListener((view)-> {
             startActivity(new Intent(MainActivity.this, ConnectCaregiverActivity.class));
-
-        });
-
-        findViewById(R.id.patientSide).setOnClickListener((view)->{
-            patientRepository = patientRepository.getInstance();
         });
 
         ImageButton panicbutton = findViewById(R.id.panicbutton);

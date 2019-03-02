@@ -2,6 +2,7 @@ package com.example.mindshare.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Patient extends User {
 
@@ -31,5 +32,15 @@ public class Patient extends User {
 
     public void addTodoItem(TodoItem todoItem) {
         todoList.add(todoItem);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        return super.equals(o);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode());
     }
 }

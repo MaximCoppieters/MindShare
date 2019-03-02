@@ -14,17 +14,17 @@
         android:layout_height="match_parent">
 
         <RelativeLayout
+            android:id="@+id/patient_side"
             android:layout_width="match_parent"
             android:layout_weight="0.5"
             android:background="@color/pastelRed"
+            android:clickable="true"
+            android:focusable="true"
             android:layout_height="match_parent">
             <ImageView
-                android:id="@+id/patientSide"
                 android:layout_height="wrap_content"
-                android:clickable="true"
                 android:src="@drawable/feedback"
                 android:layout_weight="0.5"
-                android:focusable="true"
                 android:contentDescription="Patient choice"
                 android:layout_width="match_parent" />
 
@@ -41,20 +41,20 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/supportive_side"
             android:layout_width="match_parent"
             android:layout_weight="0.5"
             android:textAlignment="center"
+            android:clickable="true"
+            android:focusable="true"
             android:background="@color/yellow"
             android:layout_height="match_parent">
             <ImageView
                 android:layout_width="match_parent"
-                android:id="@+id/supportiveSide"
                 android:padding="20dp"
                 android:layout_height="wrap_content"
                 android:src="@drawable/patient"
                 android:layout_weight="0.5"
-                android:clickable="true"
-                android:focusable="true"
                 android:contentDescription="Caretaker side" />
 
             <TextView

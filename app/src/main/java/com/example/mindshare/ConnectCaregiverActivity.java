@@ -14,7 +14,6 @@ import com.example.mindshare.model.Patient;
 import com.example.mindshare.repo.CaregiverRepository;
 
 import java.util.List;
-import java.util.zip.Inflater;
 
 public class ConnectCaregiverActivity extends AppCompatActivity {
 
@@ -32,9 +31,9 @@ public class ConnectCaregiverActivity extends AppCompatActivity {
         Button connectButton = findViewById(R.id.connect_button);
 
         connectButton.setOnClickListener(view -> {
-            TextView caregiverTextView = findViewById(R.id.caregiver_id);
+            TextView caregiverIdTextView = findViewById(R.id.caregiver_id);
 
-            String caregiverId = caregiverTextView.getText().toString();
+            String caregiverId = caregiverIdTextView.getText().toString();
 
             CaregiverRepository caregiverRepository = new CaregiverRepository();
             List<Caregiver> caregivers = caregiverRepository.getAll();
