@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        startActivity(new Intent(MainActivity.this, PatientProgressActivity.class));
         caregiverRepository = CaregiverRepository.getInstance();
         patientRepository = PatientRepository.getInstance();
         super.onCreate(savedInstanceState);

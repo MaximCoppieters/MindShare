@@ -8,55 +8,65 @@
     tools:context=".PatientCaregiverMatchActivity"
     tools:showIn="@layout/activity_patient_caregiver_match">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="44dp"
-        android:gravity="center"
-        android:text="Congratsulations"
-        android:textColor="@android:color/black"
-        android:textSize="24dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="48dp" />
-
-    <ImageView
-        android:id="@+id/caregiver_foto"
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:src="@drawable/caregiver1"
-        android:text="Your caregiver is"
-        tools:layout_editor_absoluteX="109dp"
-        tools:layout_editor_absoluteY="107dp" />
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            android:text="Congratulations"
+            android:textColor="@android:color/black"
+            android:textSize="24dp"
+             />
 
-    <TextView
-        android:id="@+id/caregiver_matched_message"
-        android:layout_width="match_parent"
-        android:layout_height="44dp"
-        android:gravity="center"
-        android:text="Your caregiver is"
-        android:textColor="@android:color/black"
-        android:textSize="24dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="362dp" />
+        <ImageView
+            android:id="@+id/caregiver_foto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/caregiver1"
+            android:text="Your caregiver is"
+            />
 
-    <TextView
-        android:id="@+id/caregiver_name"
-        android:layout_width="match_parent"
-        android:layout_height="44dp"
-        android:gravity="center"
-        android:text="Placeholder"
-        android:textColor="@android:color/black"
-        android:textSize="36dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="406dp" />
+        <TextView
+            android:id="@+id/caregiver_matched_message"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="340dp"
+            android:gravity="center"
+            android:text="Your caregiver is"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/black"
+            android:textSize="24dp"
+            />
 
-    <Button
-        android:id="@+id/connect_button"
-        style="@style/style_normal_button"
-        android:text="Start"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="475dp" />
+        <TextView
+            android:id="@+id/caregiver_name"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="380dp"
+            android:gravity="center"
+            android:text="Placeholder"
+            android:textColor="@android:color/black"
+            android:textSize="36dp"
+            android:layout_centerHorizontal="true"
+            />
+
+        <Button
+            android:id="@+id/get_assistance_button"
+            style="@style/style_normal_button"
+            android:layout_marginTop="480dp"
+            android:text="Start"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

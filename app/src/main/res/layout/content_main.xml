@@ -13,66 +13,72 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-        <ImageView
-            android:id="@+id/patientSide"
-            android:layout_height="match_parent"
-            android:src="@drawable/feedback"
-            android:clickable="true"
-            android:layout_weight="0.5"
-            android:focusable="true"
-            android:background="@color/pastelRed"
-            android:contentDescription="Patient choice"
-            android:layout_width="match_parent" />
-
-        <ImageView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:id="@+id/supportiveSide"
-            android:layout_height="match_parent"
-            android:padding="20dp"
-            android:src="@drawable/patient"
             android:layout_weight="0.5"
-            android:clickable="true"
-            android:focusable="true"
+            android:background="@color/pastelRed"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/patientSide"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:src="@drawable/feedback"
+                android:layout_weight="0.5"
+                android:focusable="true"
+                android:contentDescription="Patient choice"
+                android:layout_width="match_parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Patient"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/yellow"
+                android:textSize="25sp"
+                android:layout_marginTop="400dp"
+                android:textStyle="bold"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_weight="0.5"
+            android:textAlignment="center"
             android:background="@color/yellow"
-            android:contentDescription="Caretaker side" />
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:id="@+id/supportiveSide"
+                android:padding="20dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/patient"
+                android:layout_weight="0.5"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Caretaker side" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/care_giver_text"
+                android:textColor="@color/pastelRed"
+                android:textSize="25sp"
+                android:layout_marginTop="400dp"
+                android:textStyle="bold"
+                />
+
+            <ImageButton
+                android:id="@+id/panicbutton"
+                android:src="@drawable/panic"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:foregroundGravity="bottom"
+                tools:ignore="MissingConstraints"
+                />
+        </RelativeLayout>
 
     </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Patient"
-        android:textColor="@color/yellow"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="439dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:gravity="center"
-        android:text="@string/care_giver_text"
-        android:textColor="@color/pastelRed"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="248dp"
-        tools:layout_editor_absoluteY="442dp" />
-
-    <ImageButton
-        android:id="@+id/panicbutton"
-        android:src="@drawable/panic"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:foregroundGravity="bottom"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="295dp"
-        tools:layout_editor_absoluteY="559dp"
-        android:onClick="smsSendMessage"/>
 
 
 </android.support.constraint.ConstraintLayout>

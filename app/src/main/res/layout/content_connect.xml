@@ -64,10 +64,9 @@
             style="@style/style_normal_button"
             android:text="Connect"
             android:layout_marginTop="560dp"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            tools:layout_editor_absoluteY="548dp" />
+            />
 
         <TextView
             android:id="@+id/caregiver_not_found_warning"
