@@ -59,7 +59,9 @@ private PatientRepository patientRepository;
         ImageButton panicbutton = findViewById(R.id.panicbutton);
         panicbutton.setOnClickListener((view) -> {
             requestPermission();
-            smsSendMessage(view);
+            if (MY_PERMISSIONS_REQUEST_SEND_SMS == 1) {
+                smsSendMessage(view);
+            }
         });
 
     }
