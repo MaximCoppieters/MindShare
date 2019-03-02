@@ -12,27 +12,31 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.pxl.mindshare.PersonalProgressionActivity"
-            android:label="@string/title_activity_patient_progression"
+            android:name=".PopupQuestionActivity"
+            android:label="@string/title_activity_popup_question"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name="com.pxl.mindshare.AddPatientTodoActivity"
+            android:name=".PersonalProgressionActivity"
+            android:label="@string/title_activity_patient_progression"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AddPatientTodoActivity"
             android:label="@string/title_activity_add_patient_todo"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.pxl.mindshare.PatientProgressionActivity"
+            android:name=".PatientProgressionActivity"
             android:label="@string/title_activity_patient_progress"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.pxl.mindshare.HelpRequestActivity"
+            android:name=".HelpRequestActivity"
             android:label="@string/title_activity_help_request"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.pxl.mindshare.PatientCaregiverMatchActivity"
+            android:name=".PatientCaregiverMatchActivity"
             android:label="@string/title_activity_patient_caregiver_match"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.pxl.mindshare.UserLoginActivity"
+            android:name=".UserLoginActivity"
             android:label="@string/title_activity_user_login"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -42,18 +46,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.pxl.mindshare.PatientListActivity"
+            android:name=".PatientListActivity"
             android:label="@string/title_activity_patient_list"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.pxl.mindshare.ConnectCaregiverActivity"
+            android:name=".ConnectCaregiverActivity"
             android:label="@string/title_activity_connect"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.pxl.mindshare.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

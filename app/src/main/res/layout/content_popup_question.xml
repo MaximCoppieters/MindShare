@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".PopupQuestionActivity"
+    tools:showIn="@layout/activity_popup_question">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="What color would most describe your current feelings Jane?"
+            android:textSize="24dp"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            >
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/red"
+                style="@style/style_clickable_color_cardview"
+                android:layout_marginLeft="0dp"
+                app:cardCornerRadius="50dp"
+                app:cardBackgroundColor="@android:color/holo_red_dark"
+                >
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/black"
+                style="@style/style_clickable_color_cardview"
+                android:layout_marginLeft="300dp"
+                app:cardCornerRadius="50dp"
+                app:cardBackgroundColor="@android:color/black"
+                >
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/yellow"
+                style="@style/style_clickable_color_cardview"
+                android:layout_marginLeft="150dp"
+                app:cardCornerRadius="50dp"
+                app:cardBackgroundColor="@color/yellow"
+                >
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="220dp"
+            >
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/green"
+                style="@style/style_clickable_color_cardview"
+                android:layout_marginLeft="0dp"
+                app:cardCornerRadius="50dp"
+                app:cardBackgroundColor="@android:color/holo_green_dark"
+                >
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/purple"
+                style="@style/style_clickable_color_cardview"
+                android:layout_marginLeft="150dp"
+                app:cardCornerRadius="50dp"
+                app:cardBackgroundColor="@color/darkPurple"
+                >
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/grey"
+                style="@style/style_clickable_color_cardview"
+                android:layout_marginLeft="300dp"
+                app:cardCornerRadius="50dp"
+                app:cardBackgroundColor="@android:color/darker_gray"
+                >
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="350dp"
+            >
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/blue"
+                style="@style/style_clickable_color_cardview"
+                android:layout_marginLeft="0dp"
+                app:cardCornerRadius="50dp"
+                app:cardBackgroundColor='@color/darkBlue'
+                >
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/pink"
+                style="@style/style_clickable_color_cardview"
+                android:layout_marginLeft="300dp"
+                app:cardCornerRadius="50dp"
+                app:cardBackgroundColor="@color/pink"
+                >
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cyan"
+                style="@style/style_clickable_color_cardview"
+                android:layout_marginLeft="150dp"
+                app:cardCornerRadius="50dp"
+                app:cardBackgroundColor="@color/lightBlue"
+                >
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

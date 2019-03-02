@@ -13,4 +13,5 @@
     <string name="title_activity_patient_progress">PatientProgressActivity</string>
     <string name="title_activity_add_patient_todo">AddPatientTodoActivity</string>
     <string name="title_activity_patient_progression">PatientProgressionActivity</string>
+    <string name="title_activity_popup_question">PopupQuestionActivity</string>
 </resources>

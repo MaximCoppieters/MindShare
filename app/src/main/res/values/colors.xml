@@ -6,5 +6,8 @@
 <color name="yellow">#F8E9A1</color><!-- free 2 use -->
 <color name="middleBlue">#374788</color> <!-- toolbar -->
 <color name="darkBlue">#24305E</color><!-- free 2 use -->
+<color name="green">#1BFF00</color><!-- free 2 use -->
+<color name="darkPurple">#910FC0</color><!-- free 2 use -->
+<color name="pink">#FF00AA</color><!-- free 2 use -->
 
 </resources>
