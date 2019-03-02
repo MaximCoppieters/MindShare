@@ -6,6 +6,7 @@ import java.util.List;
 public class Caregiver extends User {
 
     private List<Patient> patients;
+    private String id;
 
     public Caregiver(String firstName, String lastName, String password) {
         super(firstName, lastName, password);
@@ -18,5 +19,17 @@ public class Caregiver extends User {
 
     public List<Patient> getPatients() {
         return patients;
+    }
+
+    public void setPatients(List<Patient> patients) {
+        this.patients = patients;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

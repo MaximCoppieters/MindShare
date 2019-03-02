@@ -15,7 +15,7 @@ public class CaregiverRepository {
         return instance;
     }
 
-    public List<Caregiver> getCaregivers() {
+    public List<Caregiver> getAll() {
         List<Caregiver> caregivers = new ArrayList<>();
 
         PatientRepository patientRepository = new PatientRepository();

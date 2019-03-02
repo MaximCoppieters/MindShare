@@ -1,10 +1,12 @@
 package com.example.mindshare.repo;
 
 import com.example.mindshare.R;
+import com.example.mindshare.model.Caregiver;
 import com.example.mindshare.model.Patient;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class PatientRepository {
 
@@ -36,5 +38,11 @@ public class PatientRepository {
         patients.add(patient5);
 
         return patients;
+    }
+
+    public List<Patient> getPatientsOfCaregiver(Caregiver caregiver) {
+        return getPatients().stream()
+                .filter(patient -> patient.getCaregiver().equals(caregiver))
+                .collect(Collectors.toList());
     }
 }

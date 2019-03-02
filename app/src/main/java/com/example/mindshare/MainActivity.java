@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private PermissionsManager permissionsManager;
     private CaregiverRepository caregiverRepository;
-private PatientRepository patientRepository;
+    private PatientRepository patientRepository;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
