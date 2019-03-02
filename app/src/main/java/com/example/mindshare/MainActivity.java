@@ -45,10 +45,15 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-       ImageView careTaker = findViewById(R.id.supportiveSide);
-        careTaker.setOnClickListener((view)-> {
-            caregiverRepository = caregiverRepository.getInstance();
-            startActivity(new Intent(MainActivity.this, MainActivity.class));
+        ImageView caretakerSide = findViewById(R.id.supportiveSide);
+        ImageView patientSide = findViewById(R.id.patientSide);
+
+        caretakerSide.setOnClickListener((view)-> {
+            startActivity(new Intent(MainActivity.this, PatientListActivity.class));
+        });
+
+        patientSide.setOnClickListener((view)-> {
+            startActivity(new Intent(MainActivity.this, ConnectCaregiverActivity.class));
 
         });
 

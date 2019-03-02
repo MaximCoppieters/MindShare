@@ -3,7 +3,7 @@ package com.example.mindshare.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class User {
+public class User {
     private String firstName;
     private String lastName;
     private String password;

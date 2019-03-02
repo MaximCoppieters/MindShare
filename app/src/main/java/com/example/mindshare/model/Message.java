@@ -31,6 +31,10 @@ public class Message {
         return messageText;
     }
 
+    public String getShortMessageText() {
+        return messageText.substring(0,10) + "...";
+    }
+
     public void setMessageText(String messageText) {
         this.messageText = messageText;
     }

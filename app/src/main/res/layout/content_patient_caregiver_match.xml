@@ -8,4 +8,58 @@
     tools:context=".PatientCaregiverMatchActivity"
     tools:showIn="@layout/activity_patient_caregiver_match">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:text="Congratsulations"
+        android:textColor="@android:color/black"
+        android:textSize="24dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="48dp" />
+
+    <ImageView
+        android:id="@+id/caregiver_foto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:src="@drawable/caregiver1"
+        android:text="Your caregiver is"
+        tools:layout_editor_absoluteX="109dp"
+        tools:layout_editor_absoluteY="107dp" />
+
+    <TextView
+        android:id="@+id/caregiver_matched_message"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:text="Your caregiver is"
+        android:textColor="@android:color/black"
+        android:textSize="24dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="362dp" />
+
+    <TextView
+        android:id="@+id/caregiver_name"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:text="Placeholder"
+        android:textColor="@android:color/black"
+        android:textSize="36dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="406dp" />
+
+    <Button
+        android:id="@+id/connect_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@color/pastelRed"
+        android:text="Start"
+        android:textColor="@color/darkBlue"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="475dp" />
+
 </android.support.constraint.ConstraintLayout>

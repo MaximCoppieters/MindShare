@@ -12,20 +12,20 @@
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        app:cardElevation="4dp"
+        android:layout_height="80dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="@color/lightBlue"
         android:id="@+id/patient_select" >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/lightBlue"
             android:gravity="center"
             android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/patient_image"
                 android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_height="match_parent"
                 android:src="@drawable/patient1"
                 style="@style/style_list_item_image"
                 />
@@ -33,7 +33,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:textAlignment="textStart"
                 android:orientation="vertical">
 
@@ -48,17 +48,18 @@
                     android:id="@+id/patient_message"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@android:color/tertiary_text_dark"
                     tools:text="@tools:sample/lorem"
                     style="@style/style_list_item_text"
                     />
             </LinearLayout>
+
             <ImageView
                 android:id="@+id/patient_status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/exclamationmark"
                 />
-
         </LinearLayout>
 
 

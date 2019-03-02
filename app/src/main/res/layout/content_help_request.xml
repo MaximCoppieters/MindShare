@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/lightBlue"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".HelpRequestActivity"
+    tools:showIn="@layout/activity_help_request">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="What are you feeling?"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="36dp"
+        android:layout_marginTop="20dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="35dp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="top|center"
+        >
+
+        <android.support.v7.widget.CardView
+            style="@style/style_feeling_card_view"
+            app:cardBackgroundColor="@color/darkBlue"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="20dp"
+            android:layout_marginTop="120dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:text="I feel energyless"
+                android:textAlignment="center"
+                android:textSize="36dp" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            style="@style/style_feeling_card_view"
+            app:cardBackgroundColor="@color/pastelRed"
+            android:layout_marginTop="240dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="I'm feeling lonely"
+                android:textAlignment="center"
+                android:textSize="36dp" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            style="@style/style_feeling_card_view"
+            app:cardBackgroundColor="@android:color/black"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="20dp"
+            android:layout_marginTop="360dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:text="I'm having dark thoughts"
+                android:textAlignment="center"
+                android:textSize="36dp" />
+
+        </android.support.v7.widget.CardView>
+
+        <Button
+            android:id="@+id/connect_button"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="480dp"
+            android:background="@color/pastelRed"
+            android:gravity="center"
+            android:text="Let supporters know"
+            android:textColor="@color/darkBlue"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

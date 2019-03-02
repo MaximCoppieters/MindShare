@@ -11,30 +11,31 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-        <ImageView
-            android:id="@+id/patientSide"
-            android:layout_width="205dp"
-            android:layout_height="match_parent"
-            android:padding="20dp"
-            android:src="@drawable/feedback"
-            tools:ignore="MissingConstraints"
-            android:clickable="true"
-            android:focusable="true"
-            android:background="@color/pastelRed"
-            />
+        android:layout_height="match_parent">
+
 
         <ImageView
-            android:layout_width="205dp"
+            android:id="@+id/patientSide"
             android:layout_height="match_parent"
+            android:src="@drawable/feedback"
+            android:clickable="true"
+            android:layout_weight="0.5"
+            android:focusable="true"
+            android:background="@color/pastelRed"
+            android:contentDescription="Patient choice"
+            android:layout_width="match_parent" />
+
+        <ImageView
+            android:layout_width="match_parent"
             android:id="@+id/supportiveSide"
-            android:layout_gravity="right|end"
+            android:layout_height="match_parent"
             android:padding="20dp"
             android:src="@drawable/patient"
+            android:layout_weight="0.5"
             android:clickable="true"
             android:focusable="true"
-            android:background="@color/yellow"/>
+            android:background="@color/yellow"
+            android:contentDescription="Caretaker side" />
 
     </LinearLayout>
 

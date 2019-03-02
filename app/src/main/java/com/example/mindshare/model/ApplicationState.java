@@ -2,8 +2,10 @@ package com.example.mindshare.model;
 
 public class ApplicationState<T extends User> {
 
-    private Class<T> userType;
     private static final ApplicationState instance = new ApplicationState();
+
+    private User loggedInUser;
+    private Class<T> userType;
 
     private ApplicationState() { }
 
@@ -13,6 +15,14 @@ public class ApplicationState<T extends User> {
 
     public void setUserType(Class<T> userType) {
         this.userType = userType;
+    }
+
+    public void setLoggedInUser(User user) {
+        loggedInUser = user;
+    }
+
+    public User getLoggedInUser() {
+        return loggedInUser;
     }
 
     public static ApplicationState getInstance() {

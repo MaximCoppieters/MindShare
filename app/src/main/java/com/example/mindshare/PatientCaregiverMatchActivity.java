@@ -6,8 +6,15 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
+
+import com.example.mindshare.model.ApplicationState;
+import com.example.mindshare.model.Caregiver;
+import com.example.mindshare.model.Patient;
 
 public class PatientCaregiverMatchActivity extends AppCompatActivity {
+
+    private ApplicationState<Patient> appState = ApplicationState.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,14 +23,12 @@ public class PatientCaregiverMatchActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        Patient patient = (Patient) appState.getLoggedInUser();
+
+        String caregiverName = patient.getCaregiver().getFullName();
+
+        TextView caregiverNameTextView = findViewById(R.id.caregiver_name);
+        caregiverNameTextView.setText(caregiverName);
     }
 
 }

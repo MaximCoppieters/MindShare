@@ -12,11 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".PatientCaregiverMatchActivity"
-            android:label="@string/title_activity_patient_caregiver_match"
+            android:name=".HelpRequestActivity"
+            android:label="@string/title_activity_help_request"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name=".UserLogin"
+            android:name=".PatientCaregiverMatchActivity"
+            android:label="@string/title_activity_patient_caregiver_match"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UserLoginActivity"
             android:label="@string/title_activity_user_login"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -24,7 +28,7 @@
             android:label="@string/title_activity_patient_list"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ConnectActivity"
+            android:name=".ConnectCaregiverActivity"
             android:label="@string/title_activity_connect"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

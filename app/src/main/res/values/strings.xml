@@ -9,4 +9,5 @@
     <string name="care_giver_text">Care giver</string>
     <string name="title_activity_user_login">UserLogin</string>
     <string name="title_activity_patient_caregiver_match">PatientCaregiverMatchActivity</string>
+    <string name="title_activity_help_request">HelpRequestActivity</string>
 </resources>
