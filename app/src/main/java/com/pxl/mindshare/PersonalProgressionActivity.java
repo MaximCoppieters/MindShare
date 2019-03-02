@@ -14,20 +14,26 @@ import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.pxl.mindshare.model.ApplicationState;
+import com.pxl.mindshare.business.PopupTimerTask;
+import com.pxl.mindshare.business.ApplicationState;
 import com.pxl.mindshare.model.Patient;
 import com.pxl.mindshare.model.TodoItem;
 
 import java.util.List;
+import java.util.Timer;
 
 public class PersonalProgressionActivity extends AppCompatActivity {
 
     private ApplicationState<Patient> appState = ApplicationState.getInstance();
+
     private Patient patient;
+    private List<TodoItem> todoItemList;
+
     private RecyclerView todoRecyclerView;
     private RecyclerView.Adapter todoItemAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    private List<TodoItem> todoItemList;
+    private Timer showPopUpTimer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +49,16 @@ public class PersonalProgressionActivity extends AppCompatActivity {
         ImageButton panicbutton = findViewById(R.id.panicbutton);
         panicbutton.setOnClickListener((view) -> {
             startActivity(new Intent(this, HelpRequestActivity.class));
-
         });
+
+        initializePopUpTimer();
+    }
+
+    private void initializePopUpTimer() {
+        showPopUpTimer = new Timer();
+
+        PopupTimerTask popupTimerTask = new PopupTimerTask(PersonalProgressionActivity.this);
+        showPopUpTimer.schedule(popupTimerTask, 8000);
     }
 
     @Override

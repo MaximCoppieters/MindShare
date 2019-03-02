@@ -17,7 +17,6 @@
         android:background="@color/pastelRed"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent">
-        >
 
         <Button
             android:layout_width="wrap_content"

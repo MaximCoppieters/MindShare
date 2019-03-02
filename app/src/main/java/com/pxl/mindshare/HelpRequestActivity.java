@@ -103,10 +103,10 @@ public class HelpRequestActivity extends AppCompatActivity {
         } else {
             switch (cardview.getId()) {
                 case R.id.lonely:
-                    cardview.setCardBackgroundColor(Color.YELLOW);
+                    cardview.setCardBackgroundColor(Color.GRAY);
                     break;
                 case R.id.energyless:
-                    cardview.setCardBackgroundColor(Color.BLUE);
+                    cardview.setCardBackgroundColor(Color.GRAY);
                     break;
                 case R.id.dark_thoughts:
                     cardview.setCardBackgroundColor(Color.GRAY);

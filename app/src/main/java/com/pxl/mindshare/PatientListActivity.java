@@ -15,7 +15,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.pxl.mindshare.model.ApplicationState;
+import com.pxl.mindshare.business.ApplicationState;
 import com.pxl.mindshare.model.Caregiver;
 import com.pxl.mindshare.model.Patient;
 import com.pxl.mindshare.repo.PatientRepository;
