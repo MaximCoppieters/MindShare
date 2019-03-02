@@ -35,9 +35,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        startActivity(new Intent(MainActivity.this, ConnectCaregiverActivity.class));
-        caregiverRepository = new CaregiverRepository();
-        patientRepository = new PatientRepository();
+        startActivity(new Intent(MainActivity.this, PatientProgressActivity.class));
+        caregiverRepository = CaregiverRepository.getInstance();
+        patientRepository = PatientRepository.getInstance();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);

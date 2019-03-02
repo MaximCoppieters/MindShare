@@ -11,14 +11,14 @@ import java.util.List;
 public class CaregiverRepository {
     private static final CaregiverRepository instance = new CaregiverRepository();
 
-    public CaregiverRepository getInstance() {
+    public static CaregiverRepository getInstance() {
         return instance;
     }
 
     public List<Caregiver> getAll() {
         List<Caregiver> caregivers = new ArrayList<>();
 
-        PatientRepository patientRepository = new PatientRepository();
+        PatientRepository patientRepository = PatientRepository.getInstance();
         List<Patient> patients = patientRepository.getPatients();
 
 

@@ -5,6 +5,7 @@ public class ApplicationState<T extends User> {
     private static final ApplicationState instance = new ApplicationState();
 
     private User loggedInUser;
+    private Patient selectedPatient;
     private Class<T> userType;
 
     private ApplicationState() { }
@@ -26,6 +27,14 @@ public class ApplicationState<T extends User> {
             return new Patient("Test", "lastname", "password");
         }
         return loggedInUser;
+    }
+
+    public void setSelectedPatient(Patient selectedPatient) {
+        this.selectedPatient = selectedPatient;
+    }
+
+    public Patient getSelectedPatient() {
+        return selectedPatient;
     }
 
     public static ApplicationState getInstance() {

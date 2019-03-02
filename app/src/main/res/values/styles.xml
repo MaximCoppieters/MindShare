@@ -32,6 +32,14 @@
         <item name="android:padding">20dp</item>
     </style>
 
+    <style name="style_checkbox">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scaleX">1.8</item>
+        <item name="android:scaleY">1.8</item>
+        <item name="android:buttonTint">@color/pastelRed</item>
+    </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

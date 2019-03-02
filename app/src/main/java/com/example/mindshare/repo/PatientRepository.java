@@ -12,9 +12,11 @@ public class PatientRepository {
 
     private static final PatientRepository instance = new PatientRepository();
 
-    public PatientRepository getInstance() {
+    public static PatientRepository getInstance() {
         return instance;
     }
+
+    private PatientRepository() {}
 
     public List<Patient> getPatients() {
         List<Patient> patients = new ArrayList<>();

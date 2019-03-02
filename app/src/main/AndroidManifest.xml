@@ -12,9 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".PatientProgressActivity"
+            android:label="@string/title_activity_patient_progress"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".HelpRequestActivity"
             android:label="@string/title_activity_help_request"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".PatientCaregiverMatchActivity"
             android:label="@string/title_activity_patient_caregiver_match"

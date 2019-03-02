@@ -16,6 +16,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.mindshare.model.ApplicationState;
+import com.example.mindshare.model.Caregiver;
 import com.example.mindshare.model.Patient;
 import com.example.mindshare.repo.PatientRepository;
 import com.squareup.picasso.Picasso;
@@ -25,9 +27,10 @@ import java.util.List;
 public class PatientListActivity extends AppCompatActivity {
 
     private List<Patient> patients;
-    private PatientRepository patientRepository = new PatientRepository();
+    private PatientRepository patientRepository = PatientRepository.getInstance();
     private RecyclerView patientsRecyclerView;
     private PatientAdapter patientAdapter;
+    private ApplicationState<Caregiver> appState = ApplicationState.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,17 +86,15 @@ public class PatientListActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(@NonNull final PatientViewHolder patientViewHolder, final int position) {
             final Patient selectedPatient = PatientListActivity.this.patients.get(position);
+            appState.setSelectedPatient(selectedPatient);
 
             patientViewHolder.patient_name.setText(selectedPatient.getFullName());
             patientViewHolder.patient_image.setImageResource(selectedPatient.getImageId());
 
             Picasso.get().load(selectedPatient.getImageId()).into(patientViewHolder.patient_image);
 
-            patientViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    
-                }
+            patientViewHolder.itemView.setOnClickListener(view -> {
+
             });
         }
 
