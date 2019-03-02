@@ -13,6 +13,7 @@ public class ApplicationState<T extends User> {
 
     private String chosenColorDescription;
     private String chosenColorName;
+    private boolean popupCompleted;
 
     private ApplicationState() { }
 
@@ -61,5 +62,13 @@ public class ApplicationState<T extends User> {
 
     public String getChosenColorName() {
         return chosenColorName;
+    }
+
+    public boolean isPopupCompleted() {
+        return popupCompleted;
+    }
+
+    public void setPopupCompleted(boolean popupCompleted) {
+        this.popupCompleted = popupCompleted;
     }
 }

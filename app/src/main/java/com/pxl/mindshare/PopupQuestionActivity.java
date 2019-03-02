@@ -29,6 +29,7 @@ public class PopupQuestionActivity extends AppCompatActivity {
         appState = ApplicationState.getInstance();
     }
 
+    // EventHandler for color image items
     public void checkColor(View view) {
         int chosenColorId = view.getId();
 
@@ -39,6 +40,7 @@ public class PopupQuestionActivity extends AppCompatActivity {
         String chosenColorFeeling = feelingsRepository.getColorFeeling(chosenColorName);
 
         appState.setChosenColorDescription(chosenColorFeeling);
+        appState.setChosenColorName(chosenColorName);
 
         startActivity(new Intent(PopupQuestionActivity.this, ColorFeelingActivity.class));
     }
@@ -58,5 +60,4 @@ public class PopupQuestionActivity extends AppCompatActivity {
 
         return colorNameById;
     }
-
 }

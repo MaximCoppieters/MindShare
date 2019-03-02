@@ -2,11 +2,8 @@ package com.pxl.mindshare;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -26,6 +23,7 @@ public class ColorFeelingActivity extends AppCompatActivity {
         appState = ApplicationState.getInstance();
         toolbar.setTitle("You chose color " + appState.getChosenColorName());
         setSupportActionBar(toolbar);
+        appState.setPopupCompleted(true);
 
         TextView colorFeelingTextView = findViewById(R.id.color_feeling_textview);
 

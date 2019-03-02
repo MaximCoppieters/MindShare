@@ -55,10 +55,12 @@ public class PersonalProgressionActivity extends AppCompatActivity {
     }
 
     private void initializePopUpTimer() {
-        showPopUpTimer = new Timer();
+        if(appState.isPopupCompleted() == false) {
+            showPopUpTimer = new Timer();
 
-        PopupTimerTask popupTimerTask = new PopupTimerTask(PersonalProgressionActivity.this);
-        showPopUpTimer.schedule(popupTimerTask, 8000);
+            PopupTimerTask popupTimerTask = new PopupTimerTask(PersonalProgressionActivity.this);
+            showPopUpTimer.schedule(popupTimerTask, 8000);
+        }
     }
 
     @Override

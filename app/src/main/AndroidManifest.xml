@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".ColorFeelingActivity"
-            android:label="@string/title_activity_color_feeling"
+            android:label="ColorFeelingActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".PopupQuestionActivity"

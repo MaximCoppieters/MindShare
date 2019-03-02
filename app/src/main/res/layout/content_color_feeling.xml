@@ -11,11 +11,11 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="20dp"
         android:layout_height="match_parent">
         <TextView
             android:id="@+id/color_feeling_textview"
-            android:text="place"
+            android:text="placeholder"
             android:layout_centerHorizontal="true"
             android:textAlignment="center"
             android:textSize="32dp"
@@ -29,7 +29,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="350dp"
+            android:layout_marginTop="520dp"
             style="@style/style_normal_button"
             android:text="Return"
 
