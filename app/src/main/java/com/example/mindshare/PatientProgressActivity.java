@@ -48,17 +48,18 @@ public class PatientProgressActivity extends AppCompatActivity {
             }
         });
 
-/*        patient = appState.getSelectedPatient();*/
+        patient = appState.getSelectedPatient();
 
-        patient = PatientRepository.getInstance().getPatients().get(0);
-
-        patient.addTodoItem(new TodoItem("Meet with Eva", "Date at bar at 08:00 PM"));
-        patient.addTodoItem(new TodoItem("Go to the cinema", "Watch Deadpool 3 with Dan"));
-        patient.addTodoItem(new TodoItem("Call mom", "Ask how she's doing and catch up"));
-        patient.addTodoItem(new TodoItem("Go over to Matt's house", "Play Halo 2 with Matt"));
 
         todoItemList = patient.getTodoList();
         displayPatientNameOnToolBar(toolbar);
+
+        initializeTodoItemRecyclerView();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
 
         initializeTodoItemRecyclerView();
     }

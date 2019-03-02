@@ -21,7 +21,7 @@ public class CaregiverRepository {
         List<Caregiver> caregivers = new ArrayList<>();
 
         PatientRepository patientRepository = PatientRepository.getInstance();
-        List<Patient> patients = patientRepository.getPatients();
+        List<Patient> patients = patientRepository.getAll();
 
 
         Caregiver caregiver1 = new Caregiver("Jane", "Roe", "password");

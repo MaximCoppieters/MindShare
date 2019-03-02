@@ -47,9 +47,6 @@ public class ConnectCaregiverActivity extends AppCompatActivity {
 
                 appState.setLoggedInUser(loggedInPatient);
 
-                System.err.println(matchedCareGiver);
-                System.err.println(loggedInPatient);
-
                 Intent intent = new Intent(this, PatientCaregiverMatchActivity.class);
                 startActivity(intent);
             } else {

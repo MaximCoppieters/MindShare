@@ -1,11 +1,9 @@
 package com.example.mindshare;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -29,13 +27,17 @@ public class PatientCaregiverMatchActivity extends AppCompatActivity {
 
         Caregiver caregiverAssigned = patient.getCaregiver();
 
-
         TextView caregiverNameTextView = findViewById(R.id.caregiver_name);
         caregiverNameTextView.setText(caregiverAssigned.getFullName());
 
-
         ImageView caregiverImageView = findViewById(R.id.caregiver_foto);
         Picasso.get().load(caregiverAssigned.getImageId()).into(caregiverImageView);
+
+        Button startAssistanceButton = findViewById(R.id.start_assistance_button);
+
+        startAssistanceButton.setOnClickListener(view -> {
+
+        });
     }
 
 }

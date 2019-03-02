@@ -1,5 +1,6 @@
 package com.example.mindshare;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -11,9 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.mindshare.model.ApplicationState;
@@ -54,7 +53,7 @@ public class PatientListActivity extends AppCompatActivity {
     }
 
     private void initializePatients() {
-        patients = patientRepository.getPatients();
+        patients = patientRepository.getAll();
 
         patientAdapter = new PatientAdapter(patients);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
@@ -94,7 +93,8 @@ public class PatientListActivity extends AppCompatActivity {
             Picasso.get().load(selectedPatient.getImageId()).into(patientViewHolder.patient_image);
 
             patientViewHolder.itemView.setOnClickListener(view -> {
-
+                appState.setSelectedPatient(selectedPatient);
+                startActivity(new Intent(PatientListActivity.this, PatientProgressActivity.class));
             });
         }
 
