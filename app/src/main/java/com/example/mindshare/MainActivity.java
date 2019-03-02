@@ -48,7 +48,7 @@ private PatientRepository patientRepository;
        ImageView careTaker = findViewById(R.id.supportiveSide);
         careTaker.setOnClickListener((view)-> {
             caregiverRepository = caregiverRepository.getInstance();
-            startActivity(new Intent(MainActivity.this, OptionsMenuCareTaker.class));
+            startActivity(new Intent(MainActivity.this, CareTakerHome.class));
 
         });
 

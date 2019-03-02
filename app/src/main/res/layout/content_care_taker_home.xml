@@ -5,7 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".OptionsMenuCareTaker"
-    tools:showIn="@layout/activity_options_menu_care_taker"
-    android:background="@color/lightBlue">
+    tools:context=".CareTakerHome"
+    android:background="@color/lightBlue"
+    tools:showIn="@layout/activity_care_taker_home">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
 </android.support.constraint.ConstraintLayout>
