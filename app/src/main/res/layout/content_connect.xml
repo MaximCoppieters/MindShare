@@ -8,67 +8,75 @@
     tools:context=".ConnectCaregiverActivity"
     tools:showIn="@layout/activity_connect">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="44dp"
-        android:gravity="center"
-        android:text="Connect with your caregiver"
-        android:textSize="28dp"
-        android:textColor="@color/darkBlue"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="65dp" />
-
-    <ImageView
-        android:layout_width="331dp"
-        android:layout_height="285dp"
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/support"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="134dp" />
-
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="0dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="439dp">
-
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/til"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-             >
-
-        <EditText
-            android:id="@+id/caregiver_id"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/middleBlue"
-            android:textColor="@color/darkBlue"
-            android:hint="Caregiver ID"
-            app:layout_constraintWidth_percent="0.7" />
-        </android.support.design.widget.TextInputLayout>
-    </RelativeLayout>
-
-    <Button
-        android:id="@+id/connect_button"
-        style="@style/style_normal_button"
-        android:text="Connect"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="548dp" />
-
-    <TextView
-        android:id="@+id/caregiver_not_found_warning"
-        android:layout_width="match_parent"
         android:gravity="center"
-        style="@style/style_warning_textview"
-        android:text="No caregiver found for id"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="495dp" />
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:text="Connect with your caregiver"
+            android:textSize="28dp"
+            android:textColor="@color/darkBlue"
+            android:layout_marginTop="40dp"
+            />
+
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:layout_width="331dp"
+            android:layout_height="285dp"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/support"
+            />
+
+        <RelativeLayout
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="440dp"
+            >
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                >
+
+                <EditText
+                    android:id="@+id/caregiver_id"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/middleBlue"
+                    android:textColor="@color/darkBlue"
+                    android:hint="Caregiver ID"
+                    app:layout_constraintWidth_percent="0.7" />
+            </android.support.design.widget.TextInputLayout>
+        </RelativeLayout>
+
+        <Button
+            android:layout_centerHorizontal="true"
+            android:id="@+id/connect_button"
+            style="@style/style_normal_button"
+            android:text="Connect"
+            android:layout_marginTop="560dp"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="548dp" />
+
+        <TextView
+            android:id="@+id/caregiver_not_found_warning"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            style="@style/style_warning_textview"
+            android:text="No caregiver found for id"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="495dp" />
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

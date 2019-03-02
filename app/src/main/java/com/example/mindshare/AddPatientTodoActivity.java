@@ -1,5 +1,6 @@
 package com.example.mindshare;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -39,9 +40,18 @@ public class AddPatientTodoActivity extends AppCompatActivity {
             String todoDescription = todoDescriptionEditText.getText().toString();
 
             if (todoName.isEmpty() || todoDescription.isEmpty()) {
-
+                if (todoName.isEmpty()) {
+                    findViewById(R.id.to_do_name_waring)
+                            .setVisibility(View.VISIBLE);
+                } else {
+                    findViewById(R.id.to_do_description_warning)
+                            .setVisibility(View.VISIBLE);
+                }
             } else {
                 TodoItem assignedTodoItem = new TodoItem(todoName, todoDescription);
+                patient.addTodoItem(assignedTodoItem);
+
+                startActivity(new Intent(AddPatientTodoActivity.this, PatientProgressActivity.class));
             }
         });
     }
