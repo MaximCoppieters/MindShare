@@ -1,4 +1,7 @@
-package com.pxl.mindshare.model;
+package com.pxl.mindshare.business;
+
+import com.pxl.mindshare.model.Patient;
+import com.pxl.mindshare.model.User;
 
 public class ApplicationState<T extends User> {
 
@@ -7,6 +10,7 @@ public class ApplicationState<T extends User> {
     private User loggedInUser;
     private Patient selectedPatient;
     private Class<T> userType;
+    private String chosenColorDescription;
 
     private ApplicationState() { }
 
@@ -39,5 +43,13 @@ public class ApplicationState<T extends User> {
 
     public static ApplicationState getInstance() {
         return instance;
+    }
+
+    public String getChosenColorDescription() {
+        return chosenColorDescription;
+    }
+
+    public void setChosenColorDescription(String chosenColorDescription) {
+        this.chosenColorDescription = chosenColorDescription;
     }
 }
