@@ -10,7 +10,9 @@ public class ApplicationState<T extends User> {
     private User loggedInUser;
     private Patient selectedPatient;
     private Class<T> userType;
+
     private String chosenColorDescription;
+    private String chosenColorName;
 
     private ApplicationState() { }
 
@@ -51,5 +53,13 @@ public class ApplicationState<T extends User> {
 
     public void setChosenColorDescription(String chosenColorDescription) {
         this.chosenColorDescription = chosenColorDescription;
+    }
+
+    public void setChosenColorName(String chosenColorName) {
+        this.chosenColorName = chosenColorName;
+    }
+
+    public String getChosenColorName() {
+        return chosenColorName;
     }
 }

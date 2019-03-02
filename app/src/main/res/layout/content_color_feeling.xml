@@ -9,4 +9,32 @@
     android:background="@color/lightBlue"
     tools:showIn="@layout/activity_color_feeling">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/color_feeling_textview"
+            android:text="place"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:textSize="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/darkBlue"
+            />
+
+        <Button
+            android:id="@+id/return_button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="350dp"
+            style="@style/style_normal_button"
+            android:text="Return"
+
+            />
+    </RelativeLayout>
+
+
 </android.support.constraint.ConstraintLayout>

@@ -13,6 +13,7 @@ public class FeelingsRepository {
 
     private FeelingsRepository() {
         colorsByFeeling = new HashMap<>();
+        initializeColorsByFeelings();
     }
 
     private void initializeColorsByFeelings() {

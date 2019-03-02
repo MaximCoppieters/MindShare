@@ -26,6 +26,7 @@ public class PopupQuestionActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         feelingsRepository = FeelingsRepository.getInstance();
+        appState = ApplicationState.getInstance();
     }
 
     public void checkColor(View view) {
@@ -39,7 +40,7 @@ public class PopupQuestionActivity extends AppCompatActivity {
 
         appState.setChosenColorDescription(chosenColorFeeling);
 
-        startActivity(new Intent(PopupQuestionActivity.this, PatientListActivity.class));
+        startActivity(new Intent(PopupQuestionActivity.this, ColorFeelingActivity.class));
     }
 
     public Map<Integer, String> fetchColorNamesById() {
