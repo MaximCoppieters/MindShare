@@ -9,8 +9,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.pxl.mindshare.R;
+import com.pxl.mindshare.repo.FeelingsRepository;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class PopupQuestionActivity extends AppCompatActivity {
+
+    private FeelingsRepository feelingsRepository;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,20 +25,33 @@ public class PopupQuestionActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        feelingsRepository = FeelingsRepository.getInstance();
     }
 
     public void checkColor(View view) {
-        CardView clickedCardView = findViewById(view.getId());
+        int chosenColorId = view.getId();
 
+        Map<Integer, String> colorNamesByColorId = fetchColorNamesById();
 
+        String chosenColorName = colorNamesByColorId.get(chosenColorId);
+
+        feelingsRepository.getColorFeeling(chosenColorName);
+    }
+
+    public Map<Integer, String> fetchColorNamesById() {
+        Map<Integer, String> colorNameById = new HashMap<>();
+
+        colorNameById.put(R.id.black, "black");
+        colorNameById.put(R.id.blue, "blue");
+        colorNameById.put(R.id.green, "green");
+        colorNameById.put(R.id.red, "red");
+        colorNameById.put(R.id.pink, "pink");
+        colorNameById.put(R.id.yellow, "yellow");
+        colorNameById.put(R.id.purple, "purple");
+        colorNameById.put(R.id.cyan, "cyan");
+        colorNameById.put(R.id.grey, "grey");
+
+        return colorNameById;
     }
 
 }
