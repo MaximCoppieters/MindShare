@@ -1,4 +1,4 @@
-package com.example.mindshare.model;
+package com.pxl.mindshare.model;
 
 public class ApplicationState<T extends User> {
 

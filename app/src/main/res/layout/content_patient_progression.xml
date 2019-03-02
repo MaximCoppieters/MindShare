@@ -8,6 +8,4 @@
     tools:context=".PatientProgressionActivity"
     tools:showIn="@layout/activity_patient_progression">
 
-
-
 </android.support.constraint.ConstraintLayout>

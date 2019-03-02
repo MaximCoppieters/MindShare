@@ -1,4 +1,4 @@
-package com.example.mindshare;
+package com.pxl.mindshare;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

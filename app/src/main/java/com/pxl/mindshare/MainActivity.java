@@ -1,4 +1,4 @@
-package com.example.mindshare;
+package com.pxl.mindshare;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,12 +7,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 
-import com.example.mindshare.repo.CaregiverRepository;
-import com.example.mindshare.repo.PatientRepository;
+import com.pxl.mindshare.repo.CaregiverRepository;
+import com.pxl.mindshare.repo.PatientRepository;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,13 +37,6 @@ public class MainActivity extends AppCompatActivity {
         patientSide.setOnClickListener((view)-> {
             startActivity(new Intent(MainActivity.this, ConnectCaregiverActivity.class));
         });
-
-        ImageButton panicbutton = findViewById(R.id.panicbutton);
-        panicbutton.setOnClickListener((view) -> {
-            Intent intent = new Intent(this, HelpRequestActivity.class);
-
-        });
-
     }
 
     @Override
@@ -56,9 +48,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement

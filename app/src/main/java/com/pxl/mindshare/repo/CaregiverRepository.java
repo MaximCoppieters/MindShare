@@ -1,9 +1,9 @@
-package com.example.mindshare.repo;
+package com.pxl.mindshare.repo;
 
-import com.example.mindshare.R;
-import com.example.mindshare.model.ApplicationState;
-import com.example.mindshare.model.Caregiver;
-import com.example.mindshare.model.Patient;
+import com.pxl.mindshare.R;
+import com.pxl.mindshare.model.ApplicationState;
+import com.pxl.mindshare.model.Caregiver;
+import com.pxl.mindshare.model.Patient;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,8 +24,8 @@ public class CaregiverRepository {
         List<Patient> patients = patientRepository.getAll();
 
 
-        Caregiver caregiver1 = new Caregiver("Jane", "Roe", "password");
-        Caregiver caregiver2 = new Caregiver("John", "Doe", "password");
+        Caregiver caregiver1 = new Caregiver("Tina", "Ross", "password", "tinaross@gmail.com");
+        Caregiver caregiver2 = new Caregiver("Roger", "Guy", "password", "rogerguy@gmail.com");
 
         caregiver2.setId("4eaada5");
         caregiver1.setId("5da6a66");

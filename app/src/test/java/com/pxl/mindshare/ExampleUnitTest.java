@@ -1,4 +1,4 @@
-package com.example.mindshare;
+package com.pxl.mindshare;
 
 import org.junit.Test;
 

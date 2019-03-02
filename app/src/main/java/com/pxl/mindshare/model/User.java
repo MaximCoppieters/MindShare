@@ -1,4 +1,4 @@
-package com.example.mindshare.model;
+package com.pxl.mindshare.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,6 +8,8 @@ public class User {
     private String firstName;
     private String lastName;
     private String password;
+    private String email;
+
     private int imageId;
     private List<Message> inbox;
     private List<Message> outbox;
@@ -18,6 +20,13 @@ public class User {
         this.firstName = firstName;
         this.lastName = lastName;
         this.password = password;
+    }
+
+    public User(String firstName, String lastName, String password, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.password = password;
+        this.email = email;
     }
 
     public String getFirstName() {
@@ -75,5 +84,13 @@ public class User {
     @Override
     public int hashCode() {
         return Objects.hash(firstName, lastName, password);
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

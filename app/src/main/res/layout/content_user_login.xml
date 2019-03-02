@@ -7,20 +7,101 @@
     android:background="@color/lightBlue"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".UserLoginActivity"
+    android:gravity="center"
+    android:layout_marginTop="100dp"
     tools:showIn="@layout/activity_user_login">
 
-
-
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteY="3dp">
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:background="@color/pastelRed"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/darkBlue"
+            android:text="Sign up"
+            android:layout_marginLeft="210dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white" />
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Username"
-
+            android:hint="Login to mindshare"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:textColorHint="@android:color/black"
+            android:textColor="@android:color/black"
             />
+
+        <EditText
+            android:id="@+id/email_text_box"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:textColorHint="@android:color/black"
+            android:textColor="@android:color/black"
+            />
+
+        <EditText
+            android:id="@+id/password_text_box"
+            android:password="true"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="150dp"
+            android:hint="Password"
+            android:textColorHint="@android:color/black"
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:id="@+id/login_empty_warning_text_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkBlue"
+            android:textSize="20dp"
+            android:visibility="invisible"
+            android:textAlignment="center"
+            android:layout_marginTop="200dp"
+            android:layout_centerHorizontal="true"
+            android:text="Please fill in a username and password"
+            />
+
+        <TextView
+            android:id="@+id/login_invalid_warning_text_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkBlue"
+            android:textSize="20dp"
+            android:visibility="invisible"
+            android:textAlignment="center"
+            android:layout_marginTop="200dp"
+            android:layout_centerHorizontal="true"
+            android:text="Username or password was incorrect"
+            />
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="260dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/darkBlue"
+            android:layout_marginLeft="40dp"
+            android:text="Login"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white" />
+
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

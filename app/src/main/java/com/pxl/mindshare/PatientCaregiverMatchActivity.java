@@ -1,5 +1,6 @@
-package com.example.mindshare;
+package com.pxl.mindshare;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -7,9 +8,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.mindshare.model.ApplicationState;
-import com.example.mindshare.model.Caregiver;
-import com.example.mindshare.model.Patient;
+import com.pxl.mindshare.model.ApplicationState;
+import com.pxl.mindshare.model.Caregiver;
+import com.pxl.mindshare.model.Patient;
 import com.squareup.picasso.Picasso;
 
 public class PatientCaregiverMatchActivity extends AppCompatActivity {
@@ -36,7 +37,7 @@ public class PatientCaregiverMatchActivity extends AppCompatActivity {
         Button startAssistanceButton = findViewById(R.id.start_assistance_button);
 
         startAssistanceButton.setOnClickListener(view -> {
-
+            startActivity(new Intent(PatientCaregiverMatchActivity.this, PersonalProgressionActivity.class));
         });
     }
 

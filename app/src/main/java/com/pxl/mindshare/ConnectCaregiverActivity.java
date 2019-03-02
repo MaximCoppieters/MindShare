@@ -1,4 +1,4 @@
-package com.example.mindshare;
+package com.pxl.mindshare;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,10 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.mindshare.model.ApplicationState;
-import com.example.mindshare.model.Caregiver;
-import com.example.mindshare.model.Patient;
-import com.example.mindshare.repo.CaregiverRepository;
+import com.pxl.mindshare.model.ApplicationState;
+import com.pxl.mindshare.model.Caregiver;
+import com.pxl.mindshare.model.Patient;
+import com.pxl.mindshare.repo.CaregiverRepository;
 
 import java.util.List;
 

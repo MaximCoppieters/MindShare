@@ -1,4 +1,4 @@
-package com.example.mindshare;
+package com.pxl.mindshare;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,10 +15,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.mindshare.model.ApplicationState;
-import com.example.mindshare.model.Caregiver;
-import com.example.mindshare.model.Patient;
-import com.example.mindshare.repo.PatientRepository;
+import com.pxl.mindshare.model.ApplicationState;
+import com.pxl.mindshare.model.Caregiver;
+import com.pxl.mindshare.model.Patient;
+import com.pxl.mindshare.repo.PatientRepository;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -94,7 +94,7 @@ public class PatientListActivity extends AppCompatActivity {
 
             patientViewHolder.itemView.setOnClickListener(view -> {
                 appState.setSelectedPatient(selectedPatient);
-                startActivity(new Intent(PatientListActivity.this, PatientProgressActivity.class));
+                startActivity(new Intent(PatientListActivity.this, PatientProgressionActivity.class));
             });
         }
 

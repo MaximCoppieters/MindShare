@@ -67,15 +67,6 @@
                 android:layout_marginTop="400dp"
                 android:textStyle="bold"
                 />
-
-            <ImageButton
-                android:id="@+id/panicbutton"
-                android:src="@drawable/panic"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:foregroundGravity="bottom"
-                tools:ignore="MissingConstraints"
-                />
         </RelativeLayout>
 
     </LinearLayout>

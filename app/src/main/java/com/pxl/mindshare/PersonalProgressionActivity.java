@@ -1,9 +1,8 @@
-package com.example.mindshare;
+package com.pxl.mindshare;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -12,49 +11,40 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.mindshare.model.ApplicationState;
-import com.example.mindshare.model.Caregiver;
-import com.example.mindshare.model.Patient;
-import com.example.mindshare.model.TodoItem;
-import com.example.mindshare.repo.PatientRepository;
+import com.pxl.mindshare.model.ApplicationState;
+import com.pxl.mindshare.model.Patient;
+import com.pxl.mindshare.model.TodoItem;
 
 import java.util.List;
 
-public class PatientProgressActivity extends AppCompatActivity {
+public class PersonalProgressionActivity extends AppCompatActivity {
 
-    private ApplicationState<Caregiver> appState = ApplicationState.getInstance();
+    private ApplicationState<Patient> appState = ApplicationState.getInstance();
     private Patient patient;
     private RecyclerView todoRecyclerView;
     private RecyclerView.Adapter todoItemAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-
     private List<TodoItem> todoItemList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_patient_progress);
+        setContentView(R.layout.activity_personal_progression);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(PatientProgressActivity.this, AddPatientTodoActivity.class));
-            }
-        });
-
-        patient = appState.getSelectedPatient();
-
+        patient = (Patient) appState.getLoggedInUser();
 
         todoItemList = patient.getTodoList();
-        displayPatientNameOnToolBar(toolbar);
 
-        initializeTodoItemRecyclerView();
+        ImageButton panicbutton = findViewById(R.id.panicbutton);
+        panicbutton.setOnClickListener((view) -> {
+            startActivity(new Intent(this, HelpRequestActivity.class));
+
+        });
     }
 
     @Override
@@ -88,9 +78,9 @@ public class PatientProgressActivity extends AppCompatActivity {
 
         }
 
+        @NonNull
         @Override
-        public ViewHolder onCreateViewHolder(ViewGroup parent,
-                                                             int viewType) {
+        public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
             View itemLayoutView = LayoutInflater.from(parent.getContext()).inflate(
                     R.layout.row_todo_select, null);
 
@@ -109,19 +99,12 @@ public class PatientProgressActivity extends AppCompatActivity {
             viewHolder.todoCompletedCheckBox.setTag(todoList.get(position));
 
 
-            viewHolder.todoCompletedCheckBox.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    CheckBox cb = (CheckBox) v;
-                    TodoItem contact = (TodoItem) cb.getTag();
+            viewHolder.todoCompletedCheckBox.setOnClickListener(v -> {
+                CheckBox cb = (CheckBox) v;
+                TodoItem contact = (TodoItem) cb.getTag();
 
-                    contact.setSelected(cb.isChecked());
-                    todoList.get(pos).setSelected(cb.isChecked());
-
-                    Toast.makeText(
-                            v.getContext(),
-                            "Clicked on Checkbox: " + cb.getText() + " is "
-                                    + cb.isChecked(), Toast.LENGTH_LONG).show();
-                }
+                contact.setSelected(cb.isChecked());
+                todoList.get(pos).setSelected(cb.isChecked());
             });
 
         }
@@ -157,4 +140,5 @@ public class PatientProgressActivity extends AppCompatActivity {
             return todoList;
         }
     }
+
 }

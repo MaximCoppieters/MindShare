@@ -1,13 +1,11 @@
-package com.example.mindshare.repo;
+package com.pxl.mindshare.repo;
 
-import com.example.mindshare.R;
-import com.example.mindshare.model.Caregiver;
-import com.example.mindshare.model.Patient;
-import com.example.mindshare.model.TodoItem;
+import com.pxl.mindshare.R;
+import com.pxl.mindshare.model.Patient;
+import com.pxl.mindshare.model.TodoItem;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class PatientRepository {
 
@@ -22,11 +20,11 @@ public class PatientRepository {
     public List<Patient> getAll() {
         List<Patient> patients = new ArrayList<>();
 
-        Patient patient1 = new Patient("John", "Doe", "password");
-        Patient patient2 = new Patient("Jane", "Roe", "password");
-        Patient patient3 = new Patient("Allen", "Smith", "password");
-        Patient patient4 = new Patient("Hugh", "Boss", "password");
-        Patient patient5 = new Patient("Darren", "Dayum", "password");
+        Patient patient1 = new Patient( "John", "Doe", "password", "johndoe@gmail.com");
+        Patient patient2 = new Patient("Jane", "Roe", "password", "janeroe@gmail.com");
+        Patient patient3 = new Patient("Allen", "Smith", "password", "allensmith@gmail.com");
+        Patient patient4 = new Patient("Hugh", "Boss", "password", "highboss@gmail.com");
+        Patient patient5 = new Patient("Darren", "Dayum", "password", "darrendayum@gmail.com");
 
         patient1.setImageId(R.drawable.patient1);
         patient2.setImageId(R.drawable.patient2);

@@ -1,19 +1,17 @@
-package com.example.mindshare;
+package com.pxl.mindshare;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.mindshare.model.ApplicationState;
-import com.example.mindshare.model.Caregiver;
-import com.example.mindshare.model.Patient;
-import com.example.mindshare.model.TodoItem;
+import com.pxl.mindshare.model.ApplicationState;
+import com.pxl.mindshare.model.Caregiver;
+import com.pxl.mindshare.model.Patient;
+import com.pxl.mindshare.model.TodoItem;
 
 public class AddPatientTodoActivity extends AppCompatActivity {
 
@@ -51,7 +49,7 @@ public class AddPatientTodoActivity extends AppCompatActivity {
                 TodoItem assignedTodoItem = new TodoItem(todoName, todoDescription);
                 patient.addTodoItem(assignedTodoItem);
 
-                startActivity(new Intent(AddPatientTodoActivity.this, PatientProgressActivity.class));
+                startActivity(new Intent(AddPatientTodoActivity.this, PatientProgressionActivity.class));
             }
         });
     }

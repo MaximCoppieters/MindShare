@@ -1,4 +1,4 @@
-package com.example.mindshare.model;
+package com.pxl.mindshare.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +11,11 @@ public class Caregiver extends User {
 
     public Caregiver(String firstName, String lastName, String password) {
         super(firstName, lastName, password);
+        patients = new ArrayList<>();
+    }
+
+    public Caregiver(String firstName, String lastName, String password, String email) {
+        super(firstName, lastName, password, email);
         patients = new ArrayList<>();
     }
 
