@@ -81,7 +81,7 @@ public class UserLoginActivity extends AppCompatActivity {
 
     private <T extends User> Optional<T> getUserOptionalFromRepository(List<T> users, String email, String password) {
         return users.stream().filter(user -> {
-            return user.getEmail().equals(email) || user.getPassword().equals(password);
+            return user.getEmail().equals(email) && user.getPassword().equals(password);
         }).findFirst();
     }
 
