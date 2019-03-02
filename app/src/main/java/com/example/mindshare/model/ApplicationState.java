@@ -22,6 +22,9 @@ public class ApplicationState<T extends User> {
     }
 
     public User getLoggedInUser() {
+        if (loggedInUser == null) {
+            return new Patient("Test", "lastname", "password");
+        }
         return loggedInUser;
     }
 

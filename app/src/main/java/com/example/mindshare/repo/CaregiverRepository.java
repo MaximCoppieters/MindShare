@@ -22,8 +22,11 @@ public class CaregiverRepository {
         List<Patient> patients = patientRepository.getPatients();
 
 
-        Caregiver caregiver1 = new Caregiver("4eaada5", "Doe", "password");
-        Caregiver caregiver2 = new Caregiver("5da6a66", "Roe", "password");
+        Caregiver caregiver1 = new Caregiver("John", "Doe", "password");
+        Caregiver caregiver2 = new Caregiver("Jane", "Roe", "password");
+
+        caregiver1.setId("4eaada5");
+        caregiver2.setId("5da6a66");
 
         ApplicationState state = ApplicationState.getInstance();
 
