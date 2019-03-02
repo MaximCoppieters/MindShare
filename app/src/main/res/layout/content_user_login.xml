@@ -16,10 +16,20 @@
         android:layout_height="320dp"
         android:background="@color/pastelRed"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent">
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="MissingConstraints">
         >
 
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/login"
+            android:layout_centerHorizontal="true"
+            />
+
         <Button
+            android:id="@+id/signUpButton"
             android:layout_width="wrap_content"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
@@ -27,6 +37,7 @@
             android:layout_marginTop="5dp"
             android:background="@color/darkBlue"
             android:text="Sign up"
+
             android:layout_marginLeft="210dp"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white" />
@@ -86,7 +97,7 @@
             android:textSize="20dp"
             android:visibility="invisible"
             android:textAlignment="center"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="240dp"
             android:layout_centerHorizontal="true"
             android:text="Username or password was incorrect"
             />
@@ -102,6 +113,24 @@
             android:text="Login"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_margin="10dp"
+            android:layout_height="25dp"
+            android:src="@drawable/login_headericon"
+            android:layout_alignTop="@id/email_text_box"
+            android:layout_alignStart="@id/email_text_box"
+            android:layout_alignParentLeft="true"
+            />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_margin="10dp"
+            android:layout_height="25dp"
+            android:src="@drawable/locked"
+            android:layout_alignTop="@id/password_text_box"
+            android:layout_alignStart="@id/email_text_box"
+            android:layout_alignParentLeft="true"
+            />
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

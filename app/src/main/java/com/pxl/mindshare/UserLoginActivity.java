@@ -68,6 +68,10 @@ public class UserLoginActivity extends AppCompatActivity {
                 }
             }
         });
+
+        findViewById(R.id.signUpButton).setOnClickListener((view)->{
+            startActivity(new Intent(UserLoginActivity.this, SignUpActivity.class));
+        });
     }
 
     private void resetWarningTextBoxes() {

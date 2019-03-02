@@ -6,6 +6,133 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".SignUpActivity"
-    tools:showIn="@layout/activity_sign_up">
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:layout_marginTop="150dp"
+    tools:showIn="@layout/activity_sign_up"
+>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/pastelRed"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="MissingConstraints"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:hint="Sign up for Mindshare"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black" />
+
+        <EditText
+            android:id="@+id/sign_up_first_name"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:hint="First name"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black" />
+        <EditText
+            android:id="@+id/sign_up_last_name"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="90dp"
+            android:hint="Last name"
+            android:layout_marginBottom="10dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black" />
+        <EditText
+            android:id="@+id/sign_up_email_text_box"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="130dp"
+            android:layout_marginBottom="10dp"
+            android:textColorHint="@android:color/black"
+            android:textColor="@android:color/black"
+            />
+
+        <EditText
+            android:id="@+id/password_text_box"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="170dp"
+            android:hint="Password"
+            android:password="true"
+            android:layout_marginBottom="10dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black" />
+
+        <EditText
+            android:id="@+id/reconfirm_password_text_box"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="210dp"
+            android:hint="Confirm Password"
+            android:password="true"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="10dp"
+            android:textColorHint="@android:color/black" />
+
+        <TextView
+            android:id="@+id/login_empty_warning_text_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="200dp"
+            android:text="Please fill in a username and password"
+            android:textAlignment="center"
+            android:textColor="@color/darkBlue"
+            android:textSize="20dp"
+            android:visibility="invisible" />
+
+<RadioGroup
+    android:orientation="horizontal"
+    android:layout_marginTop="260dp"
+    android:layout_centerHorizontal="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RadioButton
+        android:id="@+id/user_radio_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="User"/>
+    <RadioButton
+        android:id="@+id/care_taker_radio_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Care giver"
+        android:layout_margin="10dp"/>
+
+</RadioGroup>
+
+        <Button
+            android:id="@+id/sign_up__activity_sign_up_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="330dp"
+            android:background="@color/darkBlue"
+            android:text="Sign up"
+            android:layout_marginBottom="10dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"/>
+
+    </RelativeLayout>
+
 
 </android.support.constraint.ConstraintLayout>
