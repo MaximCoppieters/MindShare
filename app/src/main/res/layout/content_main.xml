@@ -11,8 +11,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="match_parent"
+        >
         <ImageView
             android:id="@+id/patientSide"
             android:layout_width="205dp"
@@ -24,6 +24,7 @@
             android:focusable="true"
             android:background="@color/pastelRed"
             />
+
         <ImageView
             android:layout_width="205dp"
             android:layout_height="match_parent"
@@ -35,17 +36,30 @@
             android:focusable="true"
             android:background="@color/yellow"/>
 
-
     </LinearLayout>
 
-    <ImageButton
-        android:src="@drawable/panic"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:foregroundGravity="bottom"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Patient"
+        android:textColor="@color/yellow"
+        android:textSize="25sp"
+        android:textStyle="bold"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="295dp"
-        tools:layout_editor_absoluteY="559dp"
-        android:onClick="smsSendMessage"/>
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="439dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/care_giver_text"
+        android:textColor="@color/pastelRed"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="248dp"
+        tools:layout_editor_absoluteY="442dp" />
 
 </android.support.constraint.ConstraintLayout>
