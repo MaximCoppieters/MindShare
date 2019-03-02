@@ -1,51 +1,22 @@
 package com.example.mindshare.model;
 
-public class Caregiver {
+import java.util.ArrayList;
+import java.util.List;
 
-    private String id;
-    private String firstName;
-    private String lastName;
-    private int imageId;
+public class Caregiver extends User {
 
-    public Caregiver(String id, String firstName, String lastName) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
+    private List<Patient> patients;
+
+    public Caregiver(String firstName, String lastName, String password) {
+        super(firstName, lastName, password);
+        patients = new ArrayList<>();
     }
 
-    public String getId() {
-        return id;
+    public void addPatient(Patient patient) {
+        patients.add(patient);
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public int getImageId() {
-        return imageId;
-    }
-
-    public String getFullName() {
-        return firstName + lastName;
-    }
-
-    public void setImageId(int imageId) {
-        this.imageId = imageId;
+    public List<Patient> getPatients() {
+        return patients;
     }
 }
