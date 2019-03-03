@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -33,6 +34,7 @@ public class PersonalProgressionActivity extends AppCompatActivity {
     private RecyclerView.Adapter todoItemAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private Timer showPopUpTimer;
+    public static EditText phonenumber;
 
 
     @Override
@@ -47,6 +49,8 @@ public class PersonalProgressionActivity extends AppCompatActivity {
         todoItemList = patient.getTodoList();
 
         ImageButton panicbutton = findViewById(R.id.panicbutton);
+        phonenumber = findViewById(R.id.phonenumber);
+
         panicbutton.setOnClickListener((view) -> {
             startActivity(new Intent(this, HelpRequestActivity.class));
         });

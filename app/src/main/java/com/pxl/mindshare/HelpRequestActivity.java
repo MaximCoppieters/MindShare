@@ -15,6 +15,7 @@ import android.telephony.SmsManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.mapbox.android.core.permissions.PermissionsManager;
@@ -22,6 +23,8 @@ import com.mapbox.android.core.permissions.PermissionsManager;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.StringJoiner;
+
+import static com.pxl.mindshare.PersonalProgressionActivity.phonenumber;
 
 public class HelpRequestActivity extends AppCompatActivity {
 
@@ -145,7 +148,13 @@ public class HelpRequestActivity extends AppCompatActivity {
     }
 
     public void smsSendMessage(View view, String message) {
-        String smsNumber = "";
+        String smsNumber;
+
+        if (phonenumber == null) {
+            smsNumber = "";
+        } else {
+            smsNumber = phonenumber.getText().toString();
+        }
         String sms = message;
         Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
         smsIntent.setData(Uri.parse(smsNumber));

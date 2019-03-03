@@ -33,6 +33,18 @@
 
     <include layout="@layout/content_personal_progression" />
 
+    <EditText
+        android:id="@+id/phonenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="200dp"
+        android:height="50dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="15dp"
+        android:importantForAutofill="no" />
+
+
     <ImageButton
         android:id="@+id/panicbutton"
         android:src="@drawable/panic"
