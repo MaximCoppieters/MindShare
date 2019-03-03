@@ -145,7 +145,7 @@ public class HelpRequestActivity extends AppCompatActivity {
     }
 
     public void smsSendMessage(View view, String message) {
-        String smsNumber = "0498790525";
+        String smsNumber = "";
         String sms = message;
         Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
         smsIntent.setData(Uri.parse(smsNumber));
